@@ -1,1 +1,12 @@
-header-top{display:block}
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn.btn-web {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+/*# sourceMappingURL=style.css.map */
