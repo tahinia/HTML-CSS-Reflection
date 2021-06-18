@@ -1,0 +1,126 @@
+.header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  letter-spacing: .4px;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+}
+
+.main-navigation, .inner-nav li {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .main-navigation, .inner-nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .inner-nav {
+    display: inline-block;
+  }
+  .inner-nav li ul li {
+    display: none;
+  }
+  .inner-nav li ul:hover li {
+    display: visible;
+  }
+  .main-navigation {
+    padding-top: 2em;
+  }
+}
+
+.hero-box {
+  position: relative;
+  border-top: 1px solid rgba(51, 54, 69, 0.5);
+}
+
+.hero-main {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0))), url("../img/home-3wAI.jpg");
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-3wAI.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 209px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.hero-text {
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin: -1px auto 0;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin: 0 0 35px;
+}
+
+.hero-text span {
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 1.25rem;
+}
+
+.btn-hero {
+  background-color: #926FB1;
+}
+
+.btn-hero:hover {
+  background-color: #7e57a0;
+  border-color: #735093;
+}
+
+.btn {
+  color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  line-height: 35px;
+  padding: 5px 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */

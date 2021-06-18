@@ -1,10 +1,20 @@
 //Partial Imports
 
-//Utilities
+@import './header';
 
+
+//Utilities
+@import './variables';
 
 //Base styles
 @import './base';
 
 //Navigation
 @import './navigation';
+
+//hero
+
+@import './hero';
+
+@import './container';
+

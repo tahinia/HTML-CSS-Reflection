@@ -1,16 +1,16 @@
-*, :after, :before {
+* {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
+html, body{
+    letter-spacing: .4px;
+    overflow-x: hidden;
+}
 h1 {
     text-transform: uppercase;
+    color: white;
 }
 
-.btn-web {
-    color: #fff;
-    background-color: #926fb1;
-    border-color: #926fb1;
-    
-}
+
 
