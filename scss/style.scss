@@ -1,10 +1,13 @@
 //Partial Imports
 
 @import './header';
+@import './container';
 
 
 //Utilities
 @import './variables';
+
+@import "mixins";
 
 //Base styles
 @import './base';
@@ -16,6 +19,12 @@
 
 @import './hero';
 
-@import './container';
-
+//Card
 @import './card';
+
+
+
+
+
+
+
