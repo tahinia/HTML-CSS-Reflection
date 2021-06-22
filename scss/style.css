@@ -1,9 +1,3 @@
-.header-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -30,6 +24,37 @@ h1 {
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .main-navigation, .inner-nav li {
@@ -85,6 +110,24 @@ h1 {
       align-content: center;
 }
 
+@media (min-width: 768px) {
+  .hero-content {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-content {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .hero-content {
+    width: 1200px;
+  }
+}
+
 .hero-text {
   width: 100%;
   color: white;
@@ -110,6 +153,12 @@ h1 {
   font-size: 1.25rem;
 }
 
+@media (min-width: 992px) {
+  .hero-text {
+    text-align: left;
+  }
+}
+
 .btn-hero {
   background-color: #926FB1;
 }
@@ -130,29 +179,21 @@ h1 {
   cursor: pointer;
 }
 
-#middle {
-  position: absolute;
-}
-
 .card-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .card-row .block.software:hover {
   background-color: #67809f;
 }
 
-.card-row .block.software:hover .icon-apps {
+.card-row .block.software:hover .icon {
   background-color: #fff;
   color: #67809f;
 }
@@ -161,6 +202,81 @@ h1 {
   border-color: #fff;
   background-color: #fff;
   color: #67809f;
+}
+
+.card-row .block.it:hover {
+  background-color: #4183d7;
+}
+
+.card-row .block.it:hover .icon {
+  background-color: #fff;
+  color: #4183d7;
+}
+
+.card-row .block.it:hover .btn.btn-it {
+  border-color: #fff;
+  background-color: #fff;
+  color: #4183d7;
+}
+
+.card-row .block.digital:hover {
+  background-color: #2ecc71;
+}
+
+.card-row .block.digital:hover .icon {
+  background-color: #fff;
+  color: #2ecc71;
+}
+
+.card-row .block.digital:hover .btn.btn-digital {
+  border-color: #fff;
+  background-color: #fff;
+  color: #2ecc71;
+}
+
+.card-row .block.telecoms:hover {
+  background-color: #d64541;
+}
+
+.card-row .block.telecoms:hover .icon {
+  background-color: #fff;
+  color: #d64541;
+}
+
+.card-row .block.telecoms:hover .btn.btn-telecoms {
+  border-color: #fff;
+  background-color: #fff;
+  color: #d64541;
+}
+
+.card-row .block.web:hover {
+  background-color: #926fb1;
+}
+
+.card-row .block.web:hover .icon {
+  background-color: #fff;
+  color: #926fb1;
+}
+
+.card-row .block.web:hover .btn.btn-web {
+  border-color: #fff;
+  background-color: #fff;
+  color: #926fb1;
+}
+
+.card-row .block.security:hover {
+  background-color: #f62459;
+}
+
+.card-row .block.security:hover .icon {
+  background-color: #fff;
+  color: #f62459;
+}
+
+.card-row .block.security:hover .btn.btn-security {
+  border-color: #fff;
+  background-color: #fff;
+  color: #f62459;
 }
 
 .card-row .block:hover {
@@ -172,6 +288,29 @@ h1 {
   background-color: #fff;
 }
 
+@media (min-width: 992px) {
+  .card-row .card.software, .card-row .card.it, .card-row .card.digital {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 30%;
+            flex: 1 1 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-row .card.telecoms, .card-row .card.web, .card-row .card.security {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 45%;
+            flex: 1 45%;
+  }
+}
+
+@media (min-width: 1260px) {
+  .card-row .card.telecoms, .card-row .card.web, .card-row .card.security {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+}
+
 .card {
   position: relative;
   min-height: 1px;
@@ -179,6 +318,10 @@ h1 {
   padding-right: 15px;
   color: #333645;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
 .card h2 {
@@ -219,7 +362,13 @@ h1 {
 
 .block {
   margin-top: 30px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 30px;
@@ -227,7 +376,31 @@ h1 {
           box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 }
 
-.icon-apps {
+.software .icon {
+  background-color: #67809f;
+}
+
+.it .icon {
+  background-color: #4183d7;
+}
+
+.digital .icon {
+  background-color: #2ecc71;
+}
+
+.telecoms .icon {
+  background-color: #d64541;
+}
+
+.web .icon {
+  background-color: #926fb1;
+}
+
+.security .icon {
+  background-color: #f62459;
+}
+
+.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,16 +413,45 @@ h1 {
   font-size: 23px;
   width: 60px;
   height: 60px;
-  background-color: #67809f;
+  color: #fff;
   border: 0px solid transparent;
   border-radius: 50%;
   margin: 0 auto 17px;
-  color: #fff;
 }
 
 .btn.btn-software {
   color: #fff;
   background-color: #67809f;
   border-color: #67809f;
+}
+
+.btn.btn-it {
+  color: #fff;
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+
+.btn.btn-digital {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.btn.btn-telecoms {
+  color: #fff;
+  background-color: #d64541;
+  border-color: #d64541;
+}
+
+.btn.btn-web {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+
+.btn.btn-security {
+  color: #fff;
+  background-color: #f62459;
+  border-color: #f62459;
 }
 /*# sourceMappingURL=style.css.map */

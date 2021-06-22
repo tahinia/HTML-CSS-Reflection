@@ -1,3 +1,16 @@
-// .container{
-//     display: flex;
-// }
+.container{
+    display: flex;
+    text-align: center;
+
+    @include mq('sm'){
+        width:750px;
+    }
+
+    @include mq('md'){
+        width: 970px;
+    }
+
+    @include mq('lg'){
+        width:1200px;
+    }
+}

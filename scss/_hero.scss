@@ -15,11 +15,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 .hero-content{
  width: 100%;
  align-content: center;
+ @include mq('sm'){
+    width:750px;
+}
+
+@include mq('md'){
+    width: 970px;
+}
+
+@include mq('lg'){
+    width:1200px;
+}
+ 
 }
 
 .hero-text{
@@ -42,6 +56,10 @@
         line-height: 50px;
         font-size: 1.25rem;
     }
+    @include mq('md'){
+        text-align: left;
+       
+    }
 }
 
 .btn-hero {
@@ -63,3 +81,7 @@
     cursor: pointer;
     
 }
+
+
+
+

@@ -1,16 +1,20 @@
 //Partial Imports
+@import "mixins";
+@import "variables";
 
-@import './header';
-@import './container';
+@import "base";
+@import "header";
+@import "container";
 
 
 //Utilities
-@import './variables';
 
-@import "mixins";
+@import "mqueries";
+
+
 
 //Base styles
-@import './base';
+
 
 //Navigation
 @import './navigation';

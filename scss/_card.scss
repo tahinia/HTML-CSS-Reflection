@@ -1,17 +1,17 @@
-#middle{
-    position: absolute;
-}
+// #middle{
+    
+// }
 
 .card-row{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    flex: 1;
+    margin-left: -15px;
+    margin-right: -15px;
 
     .block.software:hover{
         background-color: #67809f;
 
-        .icon-apps{
+        .icon{
             background-color: #fff;
             color: #67809f;
         }
@@ -21,9 +21,85 @@
             background-color: #fff;
             color: #67809f
         }
+       
 
     }
- 
+    
+    .block.it:hover{
+        background-color: #4183d7;
+
+        .icon{
+            background-color: #fff;
+            color: #4183d7;
+        }
+
+        .btn.btn-it{
+            border-color: #fff;
+            background-color: #fff;
+            color: #4183d7;
+        }
+    }
+
+    .block.digital:hover{
+        background-color: #2ecc71;
+
+        .icon{
+            background-color: #fff;
+            color: #2ecc71;
+        }
+
+        .btn.btn-digital{
+            border-color: #fff;
+            background-color: #fff;
+            color: #2ecc71;
+        }
+    }
+
+    .block.telecoms:hover{
+        background-color: #d64541;
+
+        .icon{
+            background-color: #fff;
+            color: #d64541;
+        }
+
+        .btn.btn-telecoms{
+            border-color: #fff;
+            background-color: #fff;
+            color: #d64541;
+        }
+    }
+
+    .block.web:hover{
+        background-color: #926fb1;
+
+        .icon{
+            background-color: #fff;
+            color: #926fb1;
+        }
+
+        .btn.btn-web{
+            border-color: #fff;
+            background-color: #fff;
+            color: #926fb1;
+        }
+    }
+
+    .block.security:hover{
+        background-color: #f62459;
+
+        .icon{
+            background-color: #fff;
+            color: #f62459;
+        }
+
+        .btn.btn-security{
+            border-color: #fff;
+            background-color: #fff;
+            color: #f62459;
+        }
+    }
+
 
     .block:hover{
         color: #fff;
@@ -34,6 +110,27 @@
         }
     }
 
+  
+
+    .card.software, .card.it, .card.digital{
+        @include mq('md'){
+            flex: 1 1 30%;
+            
+        }
+    }
+
+    .card.telecoms, .card.web, .card.security{
+        @include mq('sm'){
+            flex: 1 45%;
+            
+        }
+        @include mq('lg'){
+            flex-basis: 20%;
+        }
+    }
+
+  
+
 }
 
 .card{
@@ -43,6 +140,8 @@
     padding-right: 15px;
     color: #333645;
     text-align: center;
+    display:flex;
+    cursor: pointer;
 
     h2{
         font-size: 1.125rem;
@@ -66,7 +165,13 @@
         margin-bottom: 13px;
         font-weight: 400;
         
-    }  
+    } 
+    
+   
+    
+
+    // xs media queries
+
     @include mq('xs'){
         flex: 1 1 100%;
         max-width: 100%;
@@ -77,32 +182,78 @@
         }
     }
 
+    //small media queries
+
+    
+
+
+    
+
+    //  &> .software, .it, .digital{
+    //     @include mq('md'){
+    //         flex: 1 1 30%;
+            
+    //     }
+    // }
+
 }
 .block {
     margin-top: 30px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 30px;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
 }
 
+.software .icon{
+    background-color: #67809f;
+}
 
-.icon-apps{
+.it .icon {
+    background-color: #4183d7;
+}
+
+.digital .icon{
+    background-color: #2ecc71;
+}
+
+.telecoms .icon{
+    background-color: #d64541;
+}
+
+.web .icon{
+    background-color: #926fb1;
+}
+
+.security .icon{
+    background-color: #f62459;
+}
+    
+
+
+.icon{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 23px;
     width: 60px;
     height: 60px;
-    background-color: #67809f;
+    color: #fff;
     border: 0px solid transparent;
     border-radius: 50%;
     margin: 0 auto 17px;
-    color: #fff;
-    
-    
 }
+
+
+
+
+
+
+
+
+
 
 .btn.btn-software {
     color: #fff;
@@ -110,4 +261,36 @@
     border-color: #67809f;
 
     
+}
+
+.btn.btn-it {
+    color: #fff;
+    background-color: #4183d7;
+    border-color: #4183d7;
+
+    
+}
+
+.btn.btn-digital{
+    color: #fff;
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.btn.btn-telecoms{
+    color: #fff;
+    background-color: #d64541;
+    border-color: #d64541;
+}
+
+.btn.btn-web{
+    color: #fff;
+    background-color: #926fb1;
+    border-color: #926fb1;
+}
+
+.btn.btn-security{
+    color: #fff;
+    background-color: #f62459;
+    border-color: #f62459;
 }
