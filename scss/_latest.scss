@@ -1,0 +1,28 @@
+.latest-top {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: #333645;
+    padding: 40px 15px;
+}
+
+.top-container {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+.latest {
+    position: relative;
+    margin: 40px auto;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: #333645;
+        height: 5px;
+        top: 61px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+}

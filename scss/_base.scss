@@ -23,3 +23,23 @@ h1 {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.margin-width{
+    @include mq('sm'){
+        width:750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @include mq('md'){
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @include mq('lg'){
+        width:1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
