@@ -1,39 +1,98 @@
-.main-navigation, .inner-nav li {
+.main-navigation{
+    background-color: #333645;
     display: none;
+
+    @include mq('md'){
+        display: block;
+    }
 }
 
+.inner-nav{
+    padding-left: 15px;
+    padding-right: 15px;
 
-
-
-@media screen and (min-width : 768px){
-    .main-navigation, .inner-nav li{
+    ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
         display: flex;
-        width: 100%;
-        
+        flex-direction: row;
+        border-left: 1px solid rbga(255,255,255,.1);
+        border-right: 1px solid rgba(0,0,0,.25);
+
+        li{
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,.1);
+            border-left: 1px solid rgba(0,0,0,.25);
+            display: list-item;
+
+            a{
+                position: relative;
+                display: block;
+                color: #fff;
+                padding: 19px 0 18px;
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                line-height: 1;
+                text-decoration: none;
+
+                small{
+                    display: block;
+                    font-size: .625rem;
+                    padding-bottom: 2px;
+                }
+
+                i{
+                    font-size: 1.2rem;
+                    display: block;
+                    padding-bottom: 12px;
+                }
+
+            }
+        }
+    }
+
+    .nav-submenu a{
+        @include mq('lg'){
+            font-size: 1rem;
+        }
+    }
+}
+
+.navweb {
+    
+    .web-menu{
+        background-color: #79539a;
     }
     
-    .inner-nav{
-        display: inline-block;
-    }
-    
-   
+    i{
+    color:#926fb1;
+}
+    :hover{
+        background-color: #926fb1;
 
-    .inner-nav li ul li {
-        display: none;
-        
-        
+        .web-menu{
+            display: block;
+        }
     }
-    
-    .inner-nav li ul:hover li {
-        display: visible;
-        
-        
+}
+
+.nav-submenu{
+    padding: 0 15px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    right: -15px;
+    z-index: 10;
+    list-style: none;
+
+    li{
+        float: left;
+        font-size: .8125rem;
+        text-transform: uppercase;
+        line-height:2.813rem;
     }
-
-    
-
-    .main-navigation {
-        padding-top: 2em;
-    }
-
 }

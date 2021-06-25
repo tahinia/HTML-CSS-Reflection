@@ -34,3 +34,23 @@
         box-shadow: 2px 2px 5px 0px rgba(0,0,0,.1);
     }
 }
+
+.award-icon{
+    flex-grow: 1;
+    padding: 0 20px;
+
+    &:hover{
+        .coloured{
+            display: inline;
+        }
+    
+        .grey {
+            display:none;
+        }
+    }
+
+}
+
+.award-row-2 {
+    margin-top: 30px;
+}
