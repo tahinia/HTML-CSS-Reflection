@@ -26,7 +26,7 @@ h1 {
   padding-bottom: 50px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .margin-width {
     width: 750px;
     margin-left: auto;
@@ -34,7 +34,7 @@ h1 {
   }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .margin-width {
     width: 970px;
     margin-left: auto;
@@ -42,7 +42,7 @@ h1 {
   }
 }
 
-@media (min-width: 1260px) {
+@media screen and (min-width: 1260px) {
   .margin-width {
     width: 1200px;
     margin-left: auto;
@@ -63,19 +63,19 @@ h1 {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 
-@media (min-width: 1260px) {
+@media screen and (min-width: 1260px) {
   .container {
     width: 1200px;
   }
@@ -134,19 +134,19 @@ h1 {
       align-content: center;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero-content {
     width: 750px;
   }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .hero-content {
     width: 970px;
   }
 }
 
-@media (min-width: 1260px) {
+@media screen and (min-width: 1260px) {
   .hero-content {
     width: 1200px;
   }
@@ -177,7 +177,7 @@ h1 {
   font-size: 1.25rem;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .hero-text {
     text-align: left;
   }
@@ -312,7 +312,7 @@ h1 {
   background-color: #fff;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .card-row .card.software, .card-row .card.it, .card-row .card.digital {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 30%;
@@ -320,7 +320,7 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .card-row .card.telecoms, .card-row .card.web, .card-row .card.security {
     -webkit-box-flex: 1;
         -ms-flex: 1 45%;
@@ -328,7 +328,7 @@ h1 {
   }
 }
 
-@media (min-width: 1260px) {
+@media screen and (min-width: 1260px) {
   .card-row .card.telecoms, .card-row .card.web, .card-row .card.security {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
@@ -370,7 +370,7 @@ h1 {
   font-weight: 400;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .card {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -489,7 +489,7 @@ h1 {
   padding-bottom: 50px;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   #about-container {
     background-image: url("../img/branded.png");
     background-repeat: no-repeat;
@@ -529,7 +529,7 @@ h1 {
   background-color: #ebebeb;
 }
 
-@media (min-width: 1260px) {
+@media screen and (min-width: 1260px) {
   .about-inner {
     width: 50%;
   }
@@ -589,7 +589,7 @@ h1 {
   padding: 0 15px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .cards-news {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -672,7 +672,7 @@ h1 {
   margin-bottom: 25px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .news-text h3 {
     min-height: 3rem;
   }
@@ -692,7 +692,7 @@ h1 {
   background-color: #286abd;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .news-1 {
     margin-top: auto;
     margin-left: 30px;
@@ -702,7 +702,13 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  .news-2 {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .news-2 {
     margin-top: auto;
     -ms-flex-item-align: stretch;
@@ -711,15 +717,275 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  .news-3 {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .news-3 {
     display: none;
   }
 }
 
-@media (min-width: 1260px) {
+@media screen and (min-width: 1260px) {
   .news-3 {
     display: block;
   }
+}
+
+#logo-section {
+  display: none;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  -webkit-box-shadow: inset 0 5px 35px -15px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 5px 35px -15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  #logo-section {
+    display: block;
+  }
+}
+
+.container-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  vertical-align: middle;
+  padding: 0 20px;
+  position: relative;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.logo:hover .logo-text {
+  display: block;
+}
+
+.logo:hover .coloured {
+  display: inline;
+}
+
+.logo:hover .grey {
+  display: none;
+}
+
+.logo-text {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: -200px;
+  right: -200px;
+  text-align: center;
+}
+
+.logo-text .popup-box {
+  background-color: #333645;
+  color: #fff;
+  padding: 20px;
+  font-size: .875rem;
+  max-width: 260px;
+  margin: 0 auto 50px;
+}
+
+.logo-text .popup-box h3 {
+  position: relative;
+  font-size: 1.125rem;
+  padding-bottom: 17px;
+  margin: 0 0 11px;
+  font-weight: 400;
+}
+
+.logo-text .popup-box h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 28px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+}
+
+.logo-text .popup-box p {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+}
+
+.logo-text .pointer {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -36px;
+}
+
+.logo-text .pointer:after {
+  content: "";
+  margin: auto;
+  display: inline-block;
+  border-color: #333645 transparent;
+  border-style: solid;
+  border-width: 35px 36px 0;
+}
+
+.coloured {
+  display: none;
+}
+
+#newsletter-section {
+  background-color: #ddd;
+}
+
+.newsletter-inner {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sign-up {
+  padding: 50px 30px;
+}
+
+.sign-up h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.newsletter-input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.newsletter-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 450px;
+          flex: 1 1 450px;
+}
+
+@media screen and (min-width: 992px) {
+  .newsletter-input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .newsletter-input:last-child {
+    padding-left: 30px;
+  }
+}
+
+.form-box {
+  margin-bottom: 15px;
+}
+
+.newsletter-box label {
+  display: inline-block;
+  color: #333645;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.newsletter-box label::after {
+  content: "*";
+  color: #d24d57;
+}
+
+.input-field {
+  height: 47px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-color: #ccc;
+  padding: 5px 15px;
+}
+
+.tick-box {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.tick-box input {
+  display: none;
+}
+
+.checkmark {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  background-color: #ddd;
+  border-radius: 3px;
+  border: 3px solid #333645;
+}
+
+.checkmark .check {
+  display: none;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: #fff;
+}
+
+.material-icons-outline {
+  font-family: 'Material Icon Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: 1tr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.checkbox-text {
+  display: block;
+  margin-top: 7px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  line-height: 32px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333645;
+}
+
+.checkbox-text a {
+  color: #333645;
+  text-decoration: underline;
+}
+
+.btn-newsletter {
+  background-color: #333645;
+}
+
+.btn-newsletter:hover {
+  background-color: #22242e;
 }
 /*# sourceMappingURL=style.css.map */

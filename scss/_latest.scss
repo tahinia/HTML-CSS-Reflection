@@ -156,6 +156,10 @@
 }
 
 .news-2 {
+
+    @include mq('xs') {
+        margin-top: 30px;
+    }
     @include mq('sm') {
         margin-top: auto;
         align-self: stretch;
@@ -163,6 +167,11 @@
 }
 
 .news-3 {
+
+    @include mq('xs') {
+        margin-top: 30px;
+    }
+    
     @include mq('sm') {
         display: none;
     }

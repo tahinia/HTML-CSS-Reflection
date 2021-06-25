@@ -14,12 +14,12 @@ $breakpoints: (
         @warn "`#{break}` is not a valid breakpoint name"
     }
     @else if $value <$sm {
-        @media (max-width: $value){
+        @media screen and (max-width: $value){
             @content;
         }
     }
     @else {
-        @media (min-width: $value){
+        @media screen and (min-width: $value){
             @content;
         }
     }
