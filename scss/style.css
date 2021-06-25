@@ -209,6 +209,7 @@ h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -332,6 +333,14 @@ h1 {
   .card-row .card.telecoms, .card-row .card.web, .card-row .card.security {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-row {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 
@@ -1074,7 +1083,7 @@ footer ul {
   padding-bottom: 25px;
 }
 
-.footer-column-4 {
+.footer-column-4 h4 {
   margin-bottom: 0px;
 }
 
@@ -1128,5 +1137,50 @@ footer ul {
 
 .li-btn:hover {
   background-color: #0077b5;
+}
+
+.award-container {
+  display: none;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .award-container {
+    display: block;
+  }
+}
+
+.award-box {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.award-row-1, .award-row-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+}
+
+.award-row-1 img, .award-row-2 img {
+  height: auto;
+  width: 100%;
+  border-style: none;
+}
+
+@media screen and (min-width: 1260px) {
+  .award-row-1 img, .award-row-2 img {
+    width: auto;
+  }
+}
+
+.award-row-1 .award-icon:first-child img {
+  width: 210px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=style.css.map */

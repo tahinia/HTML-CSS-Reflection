@@ -5,6 +5,7 @@
 .card-row{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     margin-left: -15px;
     margin-right: -15px;
 
@@ -129,7 +130,9 @@
         }
     }
 
-  
+  @include mq('md'){
+      align-items: stretch;
+  }
 
 }
 
@@ -189,12 +192,6 @@
 
     
 
-    //  &> .software, .it, .digital{
-    //     @include mq('md'){
-    //         flex: 1 1 30%;
-            
-    //     }
-    // }
 
 }
 .block {
