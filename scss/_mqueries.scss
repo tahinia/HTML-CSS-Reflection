@@ -1,0 +1,11 @@
+.support-btn, .contact-btn, .main-navigation{
+    @include mq('md'){
+        display: block;
+    }
+}
+
+.phone-box{
+    @include mq('sm'){
+        display: none;
+    }
+}

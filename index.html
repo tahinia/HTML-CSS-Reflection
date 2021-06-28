@@ -20,92 +20,146 @@
 <body>
   <!-- header with icon, buttons and search bar -->
 
-  <div class="container">
-    <div class="logo-container">
-      <a href="#">
-        <img src="img/f-logo.png" alt="Netmatters logo">
-      </a>
+  <div id="container-header" class="margin-width">
+    <div class="top-header">
+      <div class="logo-container">
+        <a href="#">
+          <img src="img/f-logo.png" alt="Netmatters logo">
+        </a>
+      </div>
+      <div class="header-buttons">
+        <div class="support">
+          <div class="btn support-btn">
+            <i class="fas fa-mouse" aria-hidden="true"></i>
+            <span>Support</span>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="btn contact-btn">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            <span>Contact</span>
+          </div>
+        </div>
+        <div class="searchbar">
+          <form method="GET" action="#" class="main-search-form">
+            <input type="text" class="main-search-box" placeholder="Search..." id="input-search" name="site-search">
+            <button type="submit" id="submit-search">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <div class="phone-box">
+          <a class="call" href="tel:01603704020">
+            <span class="fas fa-phone" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="menu">
+          <button type="button" class="burger-btn">
+            <span class="burger-box">
+              <span class="burger-pieces"></span>
+          </span>
+          <span class="burger-text">Menu</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="header-buttons">
-      <div class="support">support</div>
-      <div class="contact"> contact</div>
-      <div class="searchbar">search</div>
-      <div class="menu">menu</div>
+    <div class="small-search-box">
+      <form>
+        <input type="text" placeholder="Search..." name="Search">
+        <button class="small-search-submit" type="submit">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+    </form>
     </div>
-
   </div>
 
   <!-- nav bar -->
   <div class="main-navigation">
     <ul class="inner-nav margin-width">
-      <li class="navweb"> 
+      <li class="navweb">
         <a href="">
           <i class="fas fa-code" aria-hidden="true"></i>
           <small>Web </small>
           Design
         </a>
-        <ul role="nav-submenu web-menu">
-          <li> <a href="#">Stylish Websites</a></li>
-          <li> <a href="#">Ecommerce Stores</a></li>
-          <li> <a href="">Branding</a></li>
+        <ul class="nav-submenu web-menu">
+          <li><a href="#">Stylish Websites</a></li>
+          <li><a href="#">Ecommerce Stores</a></li>
+          <li><a href="">Branding</a></li>
           <li><a href="">Apps</a></li>
           <li><a href="">Web Hosting</a></li>
           <li><a href="">Pay Monthly Websites</a></li>
         </ul>
       </li>
-      <li class="nav-it"> 
+      <li class="nav-it">
         <a href="">
           <i class="fas fa-desktop" aria-hidden="true"></i>
           <small>IT </small>
           Support
         </a>
-        <ul role="menu">
-          <li>managed it</li>
-          <li>business it</li>
-          <li>office 365</li>
-          <li>consultancy</li>
-          <li>cloud provider</li>
-          <li>data backup</li>
+        <ul class="nav-submenu it-menu">
+          <li><a href="#">Managed IT</a></li>
+          <li><a href="#">Business IT</a></li>
+          <li><a href="#">Office 365</a></li>
+          <li><a href="#">Consultancy</a></li>
+          <li><a href="#">Cloud Provider</a></li>
+          <li><a href="#">Data Backup</a></li>
         </ul>
       </li>
-      <li> Telecoms Services
-        <ul role="menu">
-          <li>gigabit voucher</li>
-          <li>hosted voip</li>
-          <li>business voip</li>
-          <li>business broadband</li>
-          <li>leased line</li>
-          <li>3cx systems</li>
+      <li class="nav-tc">
+        <a href="#">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <small>Telecoms</small> Services</a>
+        <ul class="nav-submenu tc-menu">
+          <li><a href="#">Gigabit Voucher</a></li>
+          <li><a href="#">Hosted Voip</a></li>
+          <li><a href=""> Business Voip</a></li>
+          <li> <a href="#">Business Broadband</a></li>
+          <li> <a href="#">Leased Line</a></li>
+          <li> <a href="#">3cx Systems</a></li>
         </ul>
       </li>
-      <li> Bespoke software
-        <ul role="menu">
-          <li>workflow</li>
-          <li>automation</li>
-          <li>integration</li>
-          <li>database</li>
-          <li>sharepoint</li>
-          <li>business management</li>
+      <li class="nav-bs">
+        <a href="#">
+          <i class="fas fa-th" aria-hidden="true"></i>
+          <small>Bespoke</small>
+          Software
+        </a>
+        <ul class="nav-submenu bs-menu">
+          <li><a href="">Workflow</a></li>
+          <li><a href="">automation</a></li>
+          <li><a href="">integration</a></li>
+          <li><a href="">database</a></li>
+          <li><a href="">sharepoint</a></li>
+          <li><a href="">business management</a></li>
         </ul>
       </li>
-      <li> Digital marketing
-        <ul role="menu">
-          <li>search (seo)</li>
-          <li>paid (PPC)</li>
-          <li>conversion (cro)</li>
-          <li>email</li>
-          <li>social media</li>
-          <li>content</li>
+      <li class="nav-dm">
+        <a href="#">
+          <i class="fas fa-signal" aria-hidden="true"></i>
+          <small>Digital </small> Marketing
+        </a>
+        <ul class="nav-submenu dg-menu">
+          <li><a href="#">Search (seo)</a></li>
+          <li><a href="#">Paid (PPC)</a></li>
+          <li><a href="#">Conversion (cro)</a></li>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Social Media</a></li>
+          <li><a href="#">Content</a></li>
         </ul>
       </li>
-      <li> cyber security
-        <ul role="menu">
-          <li>assessment</li>
-          <li>management</li>
-          <li>penetration testing</li>
-          <li>cyber essentials</li>
-          <li>pci/dss</li>
-          <li>hacker prevention</li>
+      <li class="nav-cyber">
+        <a href="#">
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          <small>Cyber</small> Security
+        </a>
+        <ul class="nav-submenu cb-menu">
+          <li><a href="#">Assessment</a></li>
+          <li><a href="#">Management</a></li>
+          <li><a href="#">Penetration testing</a></li>
+          <li><a href="#">Cyber Essentials</a></li>
+          <li><a href="#">pci/dss</a></li>
+          <li><a href="#">Hacker Prevention</a></li>
         </ul>
       </li>
 
@@ -456,7 +510,7 @@
               <span class="checkmark">
                 <span class=" check material-icons">
                   done
-                  </span>
+                </span>
               </span>
               <span class="checkbox-text">
 
@@ -625,10 +679,51 @@
             <img src="img/PPC_logo-bw.jpg" alt="Prompt Payment Code" class="grey">
           </a>
         </div>
-        
+
       </div>
     </div>
   </section>
+
+  <!-- scripts -->
+  <script src="https://kit.fontawesome.com/d9dd6a6053.js" crossorigin="anonymous"></script>
+  <style media="all" id="fa-v4-font-face">
+    /*!
+    * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+    * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+    */
+    @font-face {
+      font-family: "FontAwesome";
+      font-display: block;
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")
+    }
+
+    @font-face {
+      font-family: "FontAwesome";
+      font-display: block;
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")
+    }
+
+    @font-face {
+      font-family: "FontAwesome";
+      font-display: block;
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");
+      unicode-range: U+f004-f005, U+f007, U+f017, U+f022, U+f024, U+f02e, U+f03e, U+f044, U+f057-f059, U+f06e, U+f070, U+f075, U+f07b-f07c, U+f080, U+f086, U+f089, U+f094, U+f09d, U+f0a0, U+f0a4-f0a7, U+f0c5, U+f0c7-f0c8, U+f0e0, U+f0eb, U+f0f3, U+f0f8, U+f0fe, U+f111, U+f118-f11a, U+f11c, U+f133, U+f144, U+f146, U+f14a, U+f14d-f14e, U+f150-f152, U+f15b-f15c, U+f164-f165, U+f185-f186, U+f191-f192, U+f1ad, U+f1c1-f1c9, U+f1cd, U+f1d8, U+f1e3, U+f1ea, U+f1f6, U+f1f9, U+f20a, U+f247-f249, U+f24d, U+f254-f25b, U+f25d, U+f271-f274, U+f279, U+f28b, U+f28d, U+f2b5-f2b6, U+f2b9, U+f2bb, U+f2bd, U+f2c1-f2c2, U+f2d0, U+f2d2, U+f2dc, U+f2ed, U+f3a5, U+f3d1, U+f410
+    }
+
+    @font-face {
+      font-family: "FontAwesome";
+      font-display: block;
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot);
+      src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.svg#fontawesome) format("svg");
+      unicode-range: U+f003, U+f006, U+f014, U+f016, U+f01a-f01b, U+f01d, U+f040, U+f045-f047, U+f05c-f05d, U+f07d-f07e, U+f087-f088, U+f08a-f08b, U+f08e, U+f090, U+f096-f097, U+f0a2, U+f0e4-f0e6, U+f0ec-f0ee, U+f0f5-f0f7, U+f10c, U+f112, U+f114-f115, U+f11d, U+f123, U+f132, U+f145, U+f147-f149, U+f14c, U+f166, U+f16a, U+f172, U+f175-f178, U+f18e, U+f190, U+f196, U+f1b1, U+f1d9, U+f1db, U+f1f7, U+f20c, U+f219, U+f230, U+f24a, U+f250, U+f278, U+f27b, U+f283, U+f28c, U+f28e, U+f29b-f29c, U+f2b7, U+f2ba, U+f2bc, U+f2be, U+f2c0, U+f2c3, U+f2d3-f2d4
+    }
+  </style>
+
+
+
 
 </body>
 

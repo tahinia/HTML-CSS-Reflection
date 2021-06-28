@@ -2,33 +2,29 @@
     background-color: #333645;
     display: none;
 
-    @include mq('md'){
-        display: block;
-    }
+    
 }
 
 .inner-nav{
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    border-left: 1px solid rbga(255,255,255,.1);
+    border-right: 1px solid rgba(0,0,0,.25);
 
-    ul {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        border-left: 1px solid rbga(255,255,255,.1);
-        border-right: 1px solid rgba(0,0,0,.25);
-
-        li{
+        & > li{
             flex: 1;
             text-align: center;
             border-right: 1px solid rgba(255,255,255,.1);
             border-left: 1px solid rgba(0,0,0,.25);
             display: list-item;
 
-            a{
+            & > a{
                 position: relative;
                 display: block;
                 color: #fff;
@@ -51,8 +47,11 @@
                 }
 
             }
+
+            
+                
         }
-    }
+    
 
     .nav-submenu a{
         @include mq('lg'){
@@ -63,21 +62,184 @@
 
 .navweb {
     
-    .web-menu{
+    ul{
         background-color: #79539a;
+
+        &::before{
+            background-color: #79539a;
+        }
+
+        &::after{
+            background-color: #79539a;
+        }
     }
     
     i{
     color:#926fb1;
 }
-    :hover{
+    &:hover{
         background-color: #926fb1;
 
-        .web-menu{
+        i{
+            color: #fff;
+        }
+
+        ul{
             display: block;
         }
     }
 }
+
+.nav-it {
+    
+    ul{
+        background-color: #286abd;
+
+        &::before{
+            background-color: #286abd;
+        }
+
+        &::after{
+            background-color: #286abd;
+        }
+    }
+    
+    i{
+    color:#286abd;
+}
+    &:hover{
+        background-color: #286abd;
+
+        i{
+            color: #fff;
+        }
+
+        ul{
+            display: block;
+        }
+    }
+}
+
+.nav-tc {
+    
+    ul{
+        background-color: #d64541;
+
+        &::before{
+            background-color: #d64541;
+        }
+
+        &::after{
+            background-color: #d64541;
+        }
+    }
+    
+    i{
+    color:#d64541;
+}
+    &:hover{
+        background-color: #d64541;
+
+        i{
+            color: #fff;
+        }
+
+        ul{
+            display: block;
+        }
+    }
+}
+
+.nav-bs {
+    
+    ul{
+        background-color: #67809f;
+
+        &::before{
+            background-color: #67809f;
+        }
+
+        &::after{
+            background-color: #67809f;
+        }
+    }
+    
+    i{
+    color:#67809f;
+}
+    &:hover{
+        background-color: #67809f;
+
+        i{
+            color: #fff;
+        }
+
+        ul{
+            display: block;
+        }
+    }
+}
+
+.nav-dm {
+    
+    ul{
+        background-color: #2ecc71;
+
+        &::before{
+            background-color: #2ecc71;
+        }
+
+        &::after{
+            background-color: #2ecc71;
+        }
+    }
+    
+    i{
+    color:#2ecc71;
+}
+    &:hover{
+        background-color: #2ecc71;
+
+        i{
+            color: #fff;
+        }
+
+        ul{
+            display: block;
+        }
+    }
+}
+
+.nav-cyber {
+    
+    ul{
+        background-color: #f62459;
+
+        &::before{
+            background-color: #f62459;
+        }
+
+        &::after{
+            background-color: #f62459;
+        }
+    }
+    
+    i{
+    color:#f62459;
+}
+    &:hover{
+        background-color: #f62459;
+
+        i{
+            color: #fff;
+        }
+
+        ul{
+            display: block;
+        }
+    }
+}
+
 
 .nav-submenu{
     padding: 0 15px;
@@ -94,5 +256,51 @@
         font-size: .8125rem;
         text-transform: uppercase;
         line-height:2.813rem;
+        
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &:not(:first-child){
+            padding-left: 20px;
+            
+            @include mq('lg'){
+                padding-left: 30px;
+            }
+        }
+
+        &:not(:last-child){        
+                   
+            &::after{
+            content: "-";
+            padding-left: 20px;
+            color: #fff;
+
+            @include mq('lg'){
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width:2000px;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width:2000px;
     }
 }

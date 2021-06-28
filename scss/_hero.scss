@@ -11,10 +11,19 @@
     background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-3wAI.jpg");
     background-size: cover;
     background-position:center;
-    height:calc(100vh - 209px);
+    height:calc(100vh - 153px);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mq('sm'){
+        height:calc(100vh - 110px);
+    }
+
+
+    @include mq('md'){
+        height:calc(100vh - 209px);
+    }
 
     
 }
