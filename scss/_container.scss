@@ -1,6 +1,7 @@
 .container{
     display: flex;
     text-align: center;
+    flex-wrap: wrap;
 
     @include mq('sm'){
         width:750px;

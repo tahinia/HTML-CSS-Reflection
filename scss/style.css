@@ -55,6 +55,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -1536,8 +1538,16 @@ footer ul {
   background-color: #4183d7;
 }
 
+.support-btn:hover {
+  background-color: #2a7ec6;
+}
+
 .contact-btn {
   background-color: #999aa2;
+}
+
+.contact-btn:hover {
+  background-color: #84858f;
 }
 
 .support-btn, .contact-btn {
@@ -1628,6 +1638,10 @@ footer ul {
   padding: 0;
   cursor: pointer;
   margin-left: 20px;
+}
+
+.burger-btn:hover {
+  background-color: #22242e;
 }
 
 .burger-box {

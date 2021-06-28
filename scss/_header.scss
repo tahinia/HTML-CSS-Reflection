@@ -46,10 +46,18 @@
 
 .support-btn{
     background-color: #4183d7;
+
+    &:hover{
+        background-color: #2a7ec6;
+    }
 }
 
 .contact-btn{
     background-color: #999aa2;
+
+    &:hover{
+        background-color: #84858f;
+    }
 
 }
 
@@ -132,6 +140,10 @@
     padding:0;
     cursor: pointer;
     margin-left: 20px;
+
+    &:hover{
+        background-color: #22242e;
+    }
 }
 
 .burger-box{
