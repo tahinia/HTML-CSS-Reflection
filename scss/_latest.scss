@@ -137,6 +137,34 @@
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid #ccc;
+    display: table;
+    width: 100;
+    font-size: .875rem;
+
+    & > *{
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.news-logo{
+    width: 47px;
+
+    img{
+        border-radius: 50%;
+        max-width: 47px;
+    }
+}
+
+.news-details{
+    padding-left: 20px;
+    line-height: 1.375rem;
+    color: #666;
+
+    strong{
+        color:#333645;
+        font-weight: 600;
+    }
 }
 
 .news-button {
