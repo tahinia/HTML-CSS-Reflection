@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
 
     @include mq('sm'){
         height:calc(100vh - 110px);
@@ -31,6 +32,8 @@
 .hero-content{
  width: 100%;
  align-content: center;
+ padding-left: 15px;
+ padding-right: 15px;
  @include mq('sm'){
     width:750px;
 }
