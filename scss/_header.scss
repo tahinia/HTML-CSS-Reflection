@@ -89,6 +89,13 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
     color: #555;
     font-size: 14px;
+
+    &:focus{
+        border-color: #5bc0de;
+        outline:0;
+        box-shadow: inset 0 1px 1px rgba(61, 39, 39, 0.08), 0 0 8px rgba(91, 192, 222,  .6);
+
+    }
 }
 
 #submit-search{
@@ -104,6 +111,7 @@
     vertical-align: bottom;
     position: relative;
     color: #fff;
+    cursor: pointer;
 
     .fa-search{
         position: absolute;
@@ -140,6 +148,7 @@
     padding:0;
     cursor: pointer;
     margin-left: 20px;
+    border-width: 0;
 
     &:hover{
         background-color: #22242e;
@@ -216,6 +225,10 @@
             padding-left: 15px;
             height: 47px;
             color: #555;
+
+            &:focus{
+                outline:none;
+            }
         }
     }
 }
@@ -230,4 +243,5 @@
     width: 47px;
     right: 2px;
     border: none;
+    cursor: pointer;
 }
