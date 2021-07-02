@@ -35,16 +35,12 @@
     margin-left: auto;
     margin-right: auto;
 
-    .news-1 {
-        padding: 0 15px;
-    }
+    
 
-    .news-2 {
-        padding: 0 15px;
-    }
-
-    .news-3 {
-        padding: 0 15px;
+    @include mq('mq'){
+        > * + * {
+            margin-top: 30px;
+        }
     }
 
     @include mq('sm') {
@@ -96,13 +92,14 @@
         border-radius: 3px 3px 0 0;
         width: 100%;
         height: auto;
+        object-fit: cover;
         transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     }
 }
 
 .news-text {
-    border-top: 0;
+    border-width: 0 1px 1px 1px;
     border-radius: 0 0 3px 3px;
     display: block;
     border: 1px solid #ccc;
@@ -129,6 +126,7 @@
         color: #666;
         line-height: 1.375rem;
         font-size: 0.8125rem;
+        margin-top: 0;
         margin-bottom: 25px;
     }
 
@@ -182,29 +180,27 @@
 }
 
 .news-1 {
+
+
     @include mq('sm') {
         margin-top: auto;
-        margin-left: 30px;
         align-self: stretch;
     }
 }
 
 .news-2 {
 
-    @include mq('xs') {
-        margin-top: 30px;
-    }
+    
     @include mq('sm') {
         margin-top: auto;
         align-self: stretch;
+        margin-left: 30px;
     }
 }
 
 .news-3 {
 
-    @include mq('xs') {
-        margin-top: 30px;
-    }
+  
     
     @include mq('sm') {
         display: none;
@@ -212,13 +208,9 @@
 
     @include mq('lg') {
         display: block;
+        margin-left: 30px;
     }
 
 
 }
 
-@include mq(766px) {
-    .cards-news>*+* {
-        margin-top: 30px;
-    }
-}
