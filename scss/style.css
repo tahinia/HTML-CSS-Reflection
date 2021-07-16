@@ -536,6 +536,15 @@ h1 {
   }
 }
 
+.card-row .card:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
+.card-row .card:hover .line {
+  background-color: #fff;
+}
+
 .card-row .software:hover {
   background-color: #67809f;
 }
@@ -624,15 +633,6 @@ h1 {
   border-color: #fff;
   background-color: #fff;
   color: #f62459;
-}
-
-.card-row .card:hover {
-  color: #fff;
-  border-color: transparent;
-}
-
-.card-row .card:hover .line {
-  background-color: #fff;
 }
 
 @media screen and (min-width: 992px) {
