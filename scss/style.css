@@ -626,12 +626,12 @@ h1 {
   color: #f62459;
 }
 
-.card-row .block:hover {
+.card-row .card:hover {
   color: #fff;
   border-color: transparent;
 }
 
-.card-row .block:hover .line {
+.card-row .card:hover .line {
   background-color: #fff;
 }
 
