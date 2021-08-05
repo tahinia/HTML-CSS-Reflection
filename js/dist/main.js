@@ -18,19 +18,11 @@ window.onscroll = function () {
 
 $(document).ready(function () {
   $('.owl-carousel').owlCarousel({
+    items: 1,
+    center: true,
+    dots: true,
     loop: true,
-    margin: 10,
-    nav: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 6
-      }
-    }
+    autoplay: true,
+    autoplayHoverPause: true
   });
 });
