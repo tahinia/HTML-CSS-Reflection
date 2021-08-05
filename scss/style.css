@@ -1620,6 +1620,10 @@ header {
   left: 0;
   right: 0;
   z-index: 11;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+          transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
   -webkit-box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
