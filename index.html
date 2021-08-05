@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
   <link rel="shorcut icon" href="img/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="scss/style.css">
 
@@ -19,290 +21,387 @@
 
 <body>
   <!-- header with icon, buttons and search bar. Sticky feature when up scrolling up-->
-<div id= "sticky">
-  <header>
-  <div id="container-header" class="margin-width">
-    <div class="top-header">
-      <div class="logo-container">
-        <a href="#">
-          <img src="img/f-logo.png" alt="Netmatters logo">
-        </a>
-      </div>
-      <div class="header-buttons">
-        <div class="support">
-          <div class="btn support-btn">
-            <i class="fas fa-mouse" aria-hidden="true"></i>
-            <span>Support</span>
+  <div id="sticky">
+    <header>
+      <div id="container-header" class="margin-width">
+        <div class="top-header">
+          <div class="logo-container">
+            <a href="#">
+              <img src="img/f-logo.png" alt="Netmatters logo">
+            </a>
+          </div>
+          <div class="header-buttons">
+            <div class="support">
+              <div class="btn support-btn">
+                <i class="fas fa-mouse" aria-hidden="true"></i>
+                <span>Support</span>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="btn contact-btn">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                <span>Contact</span>
+              </div>
+            </div>
+            <div class="searchbar">
+              <form method="GET" action="#" class="main-search-form">
+                <input type="text" class="main-search-box" placeholder="Search..." id="input-search" name="site-search">
+                <button type="submit" id="submit-search">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+            <div class="phone-box">
+              <a class="call" href="tel:01603704020">
+                <span class="fas fa-phone" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="menu">
+              <button type="button" class="burger-btn">
+                <span class="burger-box">
+                  <span class="burger-pieces"></span>
+                </span>
+                <span class="burger-text">Menu</span>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="contact">
-          <div class="btn contact-btn">
-            <i class="fas fa-paper-plane" aria-hidden="true"></i>
-            <span>Contact</span>
-          </div>
-        </div>
-        <div class="searchbar">
-          <form method="GET" action="#" class="main-search-form">
-            <input type="text" class="main-search-box" placeholder="Search..." id="input-search" name="site-search">
-            <button type="submit" id="submit-search">
+        <div class="small-search-box">
+          <form>
+            <input type="text" placeholder="Search..." name="Search">
+            <button class="small-search-submit" type="submit">
               <i class="fas fa-search" aria-hidden="true"></i>
             </button>
           </form>
         </div>
-        <div class="phone-box">
-          <a class="call" href="tel:01603704020">
-            <span class="fas fa-phone" aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="menu">
-          <button type="button" class="burger-btn">
-            <span class="burger-box">
-              <span class="burger-pieces"></span>
-          </span>
-          <span class="burger-text">Menu</span>
-          </button>
-        </div>
+      </div>
+    </header>
+
+    <!-- nav bar -->
+    <div class="main-navigation">
+      <div class="nav-box margin-width">
+        <ul class="inner-nav">
+          <li class="navweb">
+            <a href="#">
+              <i class="fas fa-code" aria-hidden="true"></i>
+              <small>Web </small>
+              Design
+            </a>
+            <ul class="nav-submenu web-menu">
+              <li><a href="#">Stylish Websites</a></li>
+              <li><a href="#">Ecommerce Stores</a></li>
+              <li><a href="#">Branding</a></li>
+              <li><a href="#">Apps</a></li>
+              <li><a href="#">Web Hosting</a></li>
+              <li><a href="#">Pay Monthly Websites</a></li>
+            </ul>
+          </li>
+          <li class="nav-it">
+            <a href="#">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <small>IT </small>
+              Support
+            </a>
+            <ul class="nav-submenu it-menu">
+              <li><a href="#">Managed IT</a></li>
+              <li><a href="#">Business IT</a></li>
+              <li><a href="#">Office 365</a></li>
+              <li><a href="#">Consultancy</a></li>
+              <li><a href="#">Cloud Provider</a></li>
+              <li><a href="#">Data Backup</a></li>
+            </ul>
+          </li>
+          <li class="nav-tc">
+            <a href="#">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <small>Telecoms</small> Services</a>
+            <ul class="nav-submenu tc-menu">
+              <li><a href="#">Gigabit Voucher</a></li>
+              <li><a href="#">Hosted Voip</a></li>
+              <li><a href="#"> Business Voip</a></li>
+              <li> <a href="#">Business Broadband</a></li>
+              <li> <a href="#">Leased Line</a></li>
+              <li> <a href="#">3cx Systems</a></li>
+            </ul>
+          </li>
+          <li class="nav-bs">
+            <a href="#">
+              <i class="fas fa-th" aria-hidden="true"></i>
+              <small>Bespoke</small>
+              Software
+            </a>
+            <ul class="nav-submenu bs-menu">
+              <li><a href="#">Workflow</a></li>
+              <li><a href="#">automation</a></li>
+              <li><a href="#">integration</a></li>
+              <li><a href="#">database</a></li>
+              <li><a href="#">sharepoint</a></li>
+              <li><a href="#">business management</a></li>
+            </ul>
+          </li>
+          <li class="nav-dm">
+            <a href="#">
+              <i class="fas fa-signal" aria-hidden="true"></i>
+              <small>Digital </small> Marketing
+            </a>
+            <ul class="nav-submenu dg-menu">
+              <li><a href="#">Search (seo)</a></li>
+              <li><a href="#">Paid (PPC)</a></li>
+              <li><a href="#">Conversion (cro)</a></li>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">Social Media</a></li>
+              <li><a href="#">Content</a></li>
+            </ul>
+          </li>
+          <li class="nav-cyber">
+            <a href="#">
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <small>Cyber</small> Security
+            </a>
+            <ul class="nav-submenu cb-menu">
+              <li><a href="#">Assessment</a></li>
+              <li><a href="#">Management</a></li>
+              <li><a href="#">Penetration testing</a></li>
+              <li><a href="#">Cyber Essentials</a></li>
+              <li><a href="#">pci/dss</a></li>
+              <li><a href="#">Hacker Prevention</a></li>
+            </ul>
+          </li>
+
+        </ul>
       </div>
     </div>
-    <div class="small-search-box">
-      <form>
-        <input type="text" placeholder="Search..." name="Search">
-        <button class="small-search-submit" type="submit">
-            <i class="fas fa-search" aria-hidden="true"></i>
-        </button>
-    </form>
-    </div>
   </div>
-</header>
-
-  <!-- nav bar -->
-  <div class="main-navigation">
-    <div class="nav-box margin-width">
-    <ul class="inner-nav">
-      <li class="navweb">
-        <a href="#">
-          <i class="fas fa-code" aria-hidden="true"></i>
-          <small>Web </small>
-          Design
-        </a>
-        <ul class="nav-submenu web-menu">
-          <li><a href="#">Stylish Websites</a></li>
-          <li><a href="#">Ecommerce Stores</a></li>
-          <li><a href="#">Branding</a></li>
-          <li><a href="#">Apps</a></li>
-          <li><a href="#">Web Hosting</a></li>
-          <li><a href="#">Pay Monthly Websites</a></li>
-        </ul>
-      </li>
-      <li class="nav-it">
-        <a href="#">
-          <i class="fas fa-desktop" aria-hidden="true"></i>
-          <small>IT </small>
-          Support
-        </a>
-        <ul class="nav-submenu it-menu">
-          <li><a href="#">Managed IT</a></li>
-          <li><a href="#">Business IT</a></li>
-          <li><a href="#">Office 365</a></li>
-          <li><a href="#">Consultancy</a></li>
-          <li><a href="#">Cloud Provider</a></li>
-          <li><a href="#">Data Backup</a></li>
-        </ul>
-      </li>
-      <li class="nav-tc">
-        <a href="#">
-          <i class="fas fa-phone" aria-hidden="true"></i>
-          <small>Telecoms</small> Services</a>
-        <ul class="nav-submenu tc-menu">
-          <li><a href="#">Gigabit Voucher</a></li>
-          <li><a href="#">Hosted Voip</a></li>
-          <li><a href="#"> Business Voip</a></li>
-          <li> <a href="#">Business Broadband</a></li>
-          <li> <a href="#">Leased Line</a></li>
-          <li> <a href="#">3cx Systems</a></li>
-        </ul>
-      </li>
-      <li class="nav-bs">
-        <a href="#">
-          <i class="fas fa-th" aria-hidden="true"></i>
-          <small>Bespoke</small>
-          Software
-        </a>
-        <ul class="nav-submenu bs-menu">
-          <li><a href="#">Workflow</a></li>
-          <li><a href="#">automation</a></li>
-          <li><a href="#">integration</a></li>
-          <li><a href="#">database</a></li>
-          <li><a href="#">sharepoint</a></li>
-          <li><a href="#">business management</a></li>
-        </ul>
-      </li>
-      <li class="nav-dm">
-        <a href="#">
-          <i class="fas fa-signal" aria-hidden="true"></i>
-          <small>Digital </small> Marketing
-        </a>
-        <ul class="nav-submenu dg-menu">
-          <li><a href="#">Search (seo)</a></li>
-          <li><a href="#">Paid (PPC)</a></li>
-          <li><a href="#">Conversion (cro)</a></li>
-          <li><a href="#">Email</a></li>
-          <li><a href="#">Social Media</a></li>
-          <li><a href="#">Content</a></li>
-        </ul>
-      </li>
-      <li class="nav-cyber">
-        <a href="#">
-          <i class="fas fa-shield-alt" aria-hidden="true"></i>
-          <small>Cyber</small> Security
-        </a>
-        <ul class="nav-submenu cb-menu">
-          <li><a href="#">Assessment</a></li>
-          <li><a href="#">Management</a></li>
-          <li><a href="#">Penetration testing</a></li>
-          <li><a href="#">Cyber Essentials</a></li>
-          <li><a href="#">pci/dss</a></li>
-          <li><a href="#">Hacker Prevention</a></li>
-        </ul>
-      </li>
-
-    </ul>
-    </div>
-  </div>
-</div>
 
   <!-- hero banner with button -->
-  <div class="hero-box">
-    <div class="hero-main">
-
-
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="h1-heading">Web Design</h1>
-          <p>For businesses looking to make a strong <br>
-            and effective first impression.</p>
-          <a class="btn btn-hero">
-            <span>Find out more </span><i class="fas fa-arrow-right"></i>
-          </a>
+  <div class=" sliding owl-carousel owl-theme owl-loaded">
+    <div class="owl-stage-outer">
+      <div class="owl-stage">
+        <div class="owl-item">
+          <div class="hero-box owl-item">
+            <div class="hero-main">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="h1-heading">Web Design</h1>
+                  <p>For businesses looking to make a strong <br>
+                    and effective first impression.</p>
+                  <a class="btn btn-hero">
+                    <span>Find out more </span><i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-item">
+          <div class="hero-box">
+            <div class="hero-main">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="h1-heading">Web Design</h1>
+                  <p>For businesses looking to make a strong <br>
+                    and effective first impression.</p>
+                  <a class="btn btn-hero">
+                    <span>Find out more </span><i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-item">
+          <div class="hero-box">
+            <div class="hero-main">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="h1-heading">Web Design</h1>
+                  <p>For businesses looking to make a strong <br>
+                    and effective first impression.</p>
+                  <a class="btn btn-hero">
+                    <span>Find out more </span><i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-item">
+          <div class="hero-box">
+            <div class="hero-main">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="h1-heading">Web Design</h1>
+                  <p>For businesses looking to make a strong <br>
+                    and effective first impression.</p>
+                  <a class="btn btn-hero">
+                    <span>Find out more </span><i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-item">
+          <div class="hero-box">
+            <div class="hero-main">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="h1-heading">Web Design</h1>
+                  <p>For businesses looking to make a strong <br>
+                    and effective first impression.</p>
+                  <a class="btn btn-hero">
+                    <span>Find out more </span><i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-item">
+          <div class="hero-box">
+            <div class="hero-main">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="h1-heading">Web Design</h1>
+                  <p>For businesses looking to make a strong <br>
+                    and effective first impression.</p>
+                  <a class="btn btn-hero">
+                    <span>Find out more </span><i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
-
-
-
+    </div>
+    <div class="owl-controls">
+      <div class="owl-nav">
+        <div class="owl-prev" style="display: none;">prev</div>
+        <div class="owl-next" style="display: none;">next</div>
+      </div>
+      <div class="owl-dots" style="">
+        <div class="owl-dot active"><span></span>
+        </div>
+        <div class="owl-dot"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+        <div class="owl-dot"><span></span>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- card section -->
   <div id="middle">
-      <div class="card-row">
-        <div class="card software">
-          <a class="block software">
-            <div class="icon">
-              <i class="fas fa-th"></i>
-            </div>
-            <h2>Bespoke Software </h2>
-            <span class="line"></span>
-            <p>Tailored software solutions to improve business productivity
-              and online profits.Our expert team will ensure a software solution.</p>
-            <span class="btn-container">
-              <span class="btn btn-software"> Read More</span>
-            </span>
-          </a>
-        </div>
-        <div class="card it">
-          <a class="block it">
-            <div class="icon">
-              <i class="fas fa-desktop"></i>
-            </div>
-            <h2>IT Support</h2>
-            <span class="line"></span>
-            <p>
-              Remotely managed IT services that is catered to your businesses needs, adds value and reduces costs.</p>
-            <span class="btn-container">
-              <span class="btn btn-it"> Read More</span>
-            </span>
-          </a>
-        </div>
-        <div class="card digital">
-          <a class="block digital">
-            <div class="icon">
-              <i class="fas fa-signal"></i>
-            </div>
-            <h2>Digital Marketing</h2>
-            <span class="line"></span>
-            <p>
-              Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online
-              performances.
-            </p>
-            <span class="btn-container">
-              <span class="btn btn-digital"> Read More</span>
-            </span>
-          </a>
-        </div>
-        <div class="card telecoms">
-          <a class="block telecoms">
-            <div class="icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <h2>Telecoms Services</h2>
-            <span class="line"></span>
-            <p>
-              Stay connected with bespoke telecoms solutions when you need it most.
-            </p>
-            <span class="btn-container">
-              <span class="btn btn-telecoms"> Read More</span>
-            </span>
-          </a>
-        </div>
-        <div class="card web">
-          <a class="block web">
-            <div class="icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h2>Web Design</h2>
-            <span class="line"></span>
-            <p>
-              User-centric design for businesses looking to make a lasting first impression.
-            </p>
-            <span class="btn-container">
-              <span class="btn btn-web"> Read More</span>
-            </span>
-          </a>
-        </div>
-        <div class="card security">
-          <a class="block security">
-            <div class="icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h2>Cyber Security</h2>
-            <span class="line"></span>
-            <p>
-              Ensuring your online business stays secure 24/7, 365 days of the year.
-            </p>
-            <span class="btn-container">
-              <span class="btn btn-security"> Read More</span>
-            </span>
-          </a>
-        </div>
-        <div class="card web">
-          <a class="block web">
-            <div class="icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h2>Developer Training</h2>
-            <span class="line"></span>
-            <p>
-              Have you considered a career in web development but you aren’t sure where to start?
-            </p>
-            <span class="btn-container">
-              <span class="btn btn-web"> Read More</span>
-            </span>
-          </a>
-        </div>
+    <div class="card-row">
+      <div class="card software">
+        <a class="block software">
+          <div class="icon">
+            <i class="fas fa-th"></i>
+          </div>
+          <h2>Bespoke Software </h2>
+          <span class="line"></span>
+          <p>Tailored software solutions to improve business productivity
+            and online profits.Our expert team will ensure a software solution.</p>
+          <span class="btn-container">
+            <span class="btn btn-software"> Read More</span>
+          </span>
+        </a>
       </div>
-    
+      <div class="card it">
+        <a class="block it">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h2>IT Support</h2>
+          <span class="line"></span>
+          <p>
+            Remotely managed IT services that is catered to your businesses needs, adds value and reduces costs.</p>
+          <span class="btn-container">
+            <span class="btn btn-it"> Read More</span>
+          </span>
+        </a>
+      </div>
+      <div class="card digital">
+        <a class="block digital">
+          <div class="icon">
+            <i class="fas fa-signal"></i>
+          </div>
+          <h2>Digital Marketing</h2>
+          <span class="line"></span>
+          <p>
+            Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online
+            performances.
+          </p>
+          <span class="btn-container">
+            <span class="btn btn-digital"> Read More</span>
+          </span>
+        </a>
+      </div>
+      <div class="card telecoms">
+        <a class="block telecoms">
+          <div class="icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h2>Telecoms Services</h2>
+          <span class="line"></span>
+          <p>
+            Stay connected with bespoke telecoms solutions when you need it most.
+          </p>
+          <span class="btn-container">
+            <span class="btn btn-telecoms"> Read More</span>
+          </span>
+        </a>
+      </div>
+      <div class="card web">
+        <a class="block web">
+          <div class="icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h2>Web Design</h2>
+          <span class="line"></span>
+          <p>
+            User-centric design for businesses looking to make a lasting first impression.
+          </p>
+          <span class="btn-container">
+            <span class="btn btn-web"> Read More</span>
+          </span>
+        </a>
+      </div>
+      <div class="card security">
+        <a class="block security">
+          <div class="icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h2>Cyber Security</h2>
+          <span class="line"></span>
+          <p>
+            Ensuring your online business stays secure 24/7, 365 days of the year.
+          </p>
+          <span class="btn-container">
+            <span class="btn btn-security"> Read More</span>
+          </span>
+        </a>
+      </div>
+      <div class="card web">
+        <a class="block web">
+          <div class="icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h2>Developer Training</h2>
+          <span class="line"></span>
+          <p>
+            Have you considered a career in web development but you aren’t sure where to start?
+          </p>
+          <span class="btn-container">
+            <span class="btn btn-web"> Read More</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
   </div>
   <!-- another hero banner -->
   <div id="about-container">
@@ -461,9 +560,9 @@
           </div>
         </div>
         <a href="#">
-        <img src="img/home-MjHw.png" alt="Crane Garden Buildings Logo" class="coloured">
-        <img src="img/home-BsyK.jpg" alt="Crane Garden Buildings Logo" class="grey">
-      </a>
+          <img src="img/home-MjHw.png" alt="Crane Garden Buildings Logo" class="coloured">
+          <img src="img/home-BsyK.jpg" alt="Crane Garden Buildings Logo" class="grey">
+        </a>
       </div>
       <div class="logo">
         <div class="logo-text">
@@ -485,8 +584,8 @@
           </div>
         </div>
         <a href="#">
-        <img src="img/home-kGn4.png" alt="Northern Diver Logo" class="coloured">
-        <img src="img/home-jHUl.jpg" alt="Northern Diver Logo" class="grey">
+          <img src="img/home-kGn4.png" alt="Northern Diver Logo" class="coloured">
+          <img src="img/home-jHUl.jpg" alt="Northern Diver Logo" class="grey">
         </a>
       </div>
     </div>
@@ -638,50 +737,49 @@
           </a>
         </div>
         <div class="award-icon">
-            <img src="img//silver-microsoft-partner.jpg" alt="Silver Mircrosoft Partner">
+          <img src="img//silver-microsoft-partner.jpg" alt="Silver Mircrosoft Partner">
         </div>
         <div class="award-icon">
-            <img src="img/future-50.jpg" alt="Future 50" class="coloured">
-            <img src="img/future-50-bw.jpg" alt="Future 50" class="grey">
+          <img src="img/future-50.jpg" alt="Future 50" class="coloured">
+          <img src="img/future-50-bw.jpg" alt="Future 50" class="grey">
         </div>
         <div class="award-icon">
-            <img src="img/qms.jpg" alt="QMS ISO 27001" class="coloured">
-            <img src="img/qms-bw.jpg" alt="QMS ISO 27001" class="grey">
+          <img src="img/qms.jpg" alt="QMS ISO 27001" class="coloured">
+          <img src="img/qms-bw.jpg" alt="QMS ISO 27001" class="grey">
         </div>
         <div class="award-icon">
-            <img src="img/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter" class="coloured">
-            <img src="img/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter" class="grey">
+          <img src="img/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter" class="coloured">
+          <img src="img/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter" class="grey">
         </div>
       </div>
       <div class="award-row-2">
         <div class="award-icon">
-            <img src="img/investing-in-future-growth.jpg" alt="Investing in future growth winner" class="coloured">
-            <img src="img/investing-in-future-growth-bw.jpg" alt="Investing in future growth winner" class="grey">
+          <img src="img/investing-in-future-growth.jpg" alt="Investing in future growth winner" class="coloured">
+          <img src="img/investing-in-future-growth-bw.jpg" alt="Investing in future growth winner" class="grey">
         </div>
         <div class="award-icon">
-            <img src="img/princess-royal-training.jpg" alt="Princess Royal Training" class="coloured">
-            <img src="img/princess-royal-training-bw.jpg" alt="Princess Royal Training" class="grey">
+          <img src="img/princess-royal-training.jpg" alt="Princess Royal Training" class="coloured">
+          <img src="img/princess-royal-training-bw.jpg" alt="Princess Royal Training" class="grey">
         </div>
         <div class="award-icon">
-            <img src="img/skills-of-tomorrow.jpg" alt="Skills of Tomorrow Winner" class="coloured">
-            <img src="img/skills-of-tomorrow-bw.jpg" alt="Skills of Tomorrow Winner" class="grey">
+          <img src="img/skills-of-tomorrow.jpg" alt="Skills of Tomorrow Winner" class="coloured">
+          <img src="img/skills-of-tomorrow-bw.jpg" alt="Skills of Tomorrow Winner" class="grey">
         </div>
         <div class="award-icon">
-            <img src="img/PPC_logo.jpg" alt="Prompt Payment Code" class="coloured">
-            <img src="img/PPC_logo-bw.jpg" alt="Prompt Payment Code" class="grey">
+          <img src="img/PPC_logo.jpg" alt="Prompt Payment Code" class="coloured">
+          <img src="img/PPC_logo-bw.jpg" alt="Prompt Payment Code" class="grey">
         </div>
 
       </div>
     </div>
   </section>
 
-  
 
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="jquery.min.js"></script>
+  <script src="owlcarousel/owl.carousel.min.js"></script>
   <script src="js/dist/main.js"></script>
 </body>
 
