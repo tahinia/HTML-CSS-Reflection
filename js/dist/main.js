@@ -16,13 +16,11 @@ window.onscroll = function () {
 }; // Owl carousel
 
 
-$(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
-    items: 1,
-    center: true,
-    dots: true,
-    loop: true,
-    autoplay: true,
-    autoplayHoverPause: true
-  });
+$('.owl-carousel').owlCarousel({
+  items: 1,
+  center: true,
+  dots: true,
+  loop: true,
+  autoplay: true,
+  autoplayHoverPause: true
 });

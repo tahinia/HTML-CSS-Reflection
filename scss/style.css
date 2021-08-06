@@ -14,6 +14,11 @@ h1 {
   color: white;
 }
 
+#whole-page-container {
+  position: relative;
+  height: 100vh;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -385,7 +390,6 @@ h1 {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-3wAI.jpg");
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,6 +411,156 @@ h1 {
 
 @media screen and (min-width: 992px) {
   .hero-main {
+    height: calc(100vh - 209px);
+  }
+}
+
+.hero-main2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0))), url("../img/home-57sJ.jpg");
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-57sJ.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-main2 {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-main2 {
+    height: calc(100vh - 209px);
+  }
+}
+
+.hero-main3 {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0))), url("../img/home-5yqm.jpg");
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-5yqm.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-main3 {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-main3 {
+    height: calc(100vh - 209px);
+  }
+}
+
+.hero-main4 {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0))), url("../img/home-sqvx.jpg");
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-sqvx.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-main4 {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-main4 {
+    height: calc(100vh - 209px);
+  }
+}
+
+.hero-main5 {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0))), url("../img/home-JQsO.jpg");
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-JQsO.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-main5 {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-main5 {
+    height: calc(100vh - 209px);
+  }
+}
+
+.hero-main6 {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0))), url("../img/home-lQs1.jpg");
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-lQs1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-main6 {
+    height: calc(100vh - 110px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-main6 {
     height: calc(100vh - 209px);
   }
 }
@@ -477,6 +631,51 @@ h1 {
   border-color: #735093;
 }
 
+.btn-hero2 {
+  background-color: #4183d7;
+}
+
+.btn-hero2:hover {
+  background-color: #2a6ec6;
+  border-color: #2665b5;
+}
+
+.btn-hero3 {
+  background-color: #d64541;
+}
+
+.btn-hero3:hover {
+  background-color: #c42e2a;
+  border-color: #b32a27;
+}
+
+.btn-hero4 {
+  background-color: #67809f;
+}
+
+.btn-hero4:hover {
+  background-color: #566c88;
+  border-color: #4e627b;
+}
+
+.btn-hero5 {
+  background-color: #2ecc71;
+}
+
+.btn-hero5:hover {
+  background-color: #26ab5f;
+  border-color: #239a55;
+}
+
+.btn-hero6 {
+  background-color: #f62459;
+}
+
+.btn-hero6:hover {
+  background-color: #e80a42;
+  border-color: #d4093c;
+}
+
 .btn {
   color: #fff;
   border-radius: 3px;
@@ -486,6 +685,47 @@ h1 {
   padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 44px;
+  margin-top: 10px;
+  left: 0;
+  right: 0;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 11px;
+  height: 11px;
+  margin: 0 10px;
+}
+
+.owl-theme .owl-dots .owl-dot span:hover {
+  background: #869791;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: #fff;
+  position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot.active span::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media screen and (max-width: 767px) {
