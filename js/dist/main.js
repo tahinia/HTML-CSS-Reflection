@@ -1,6 +1,8 @@
 "use strict";
 
-// Sticky header
+var stickyMenu = document.getElementById('sticky-burger-menu');
+var stickyLines = document.getElementById('sticky-burger-anim'); // Sticky header
+
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function () {
@@ -24,7 +26,6 @@ $('.owl-carousel').owlCarousel({
   autoplay: true,
   autoplayHoverPause: true
 }); //cookie popup 
-// cookie popup
 
 var popup = document.getElementById('cookie-container');
 var cookieSettings = document.getElementById('cookie-settings');
@@ -65,4 +66,13 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
     popup.classList.remove('shown');
     console.log("worked");
   });
-}
+} // Burger animation with sidebar soon
+
+
+stickyMenu.addEventListener('click', function (e) {
+  if (!stickyLines.classList.contains('is-active')) {
+    stickyLines.classList.add('is-active');
+  } else {
+    stickyLines.classList.remove('is-active');
+  }
+});

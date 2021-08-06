@@ -1,4 +1,5 @@
-
+var stickyMenu = document.getElementById('sticky-burger-menu');
+var stickyLines = document.getElementById('sticky-burger-anim');
 
 
 // Sticky header
@@ -32,7 +33,6 @@ window.onscroll = function() {
 
   //cookie popup 
 
-  // cookie popup
 
 var popup = document.getElementById('cookie-container');
 var cookieSettings = document.getElementById('cookie-settings');
@@ -73,3 +73,18 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
   });
 
 }
+
+// Burger animation with sidebar soon
+
+stickyMenu.addEventListener('click', function(e) {
+  if (!stickyLines.classList.contains('is-active')) {
+    stickyLines.classList.add('is-active');
+
+
+  } else {
+    stickyLines.classList.remove('is-active');
+
+    
+
+  }
+});
