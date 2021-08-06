@@ -19,6 +19,12 @@ h1 {
   height: 100vh;
 }
 
+.fixed-position {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -52,6 +58,127 @@ h1 {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+#cookie-container {
+  display: none;
+}
+
+#cookie-container.shown {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.cookie-inner {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+  color: #666;
+  margin: auto;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media screen and (min-width: 992px) {
+  .cookie-inner {
+    width: 600px;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+}
+
+.cookie-inner .popup-header {
+  padding: 15px 20px;
+  min-height: 16.5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cookie-inner .popup-header h3 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #333645;
+  line-height: 1.42857143;
+  margin: 0;
+}
+
+.cookie-inner .popup-body {
+  padding: 20px;
+  line-height: 1.875rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cookie-inner .popup-body p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.cookie-inner .popup-body p:last-of-type {
+  margin: 0;
+}
+
+.cookie-inner .popup-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+.cookie-inner .popup-buttons button:first-of-type {
+  margin-bottom: 30px;
+  background-color: #999aa2;
+}
+
+.cookie-inner .popup-buttons button:first-of-type:hover {
+  background-color: #84858f;
+}
+
+@media screen and (min-width: 992px) {
+  .cookie-inner .popup-buttons button:first-of-type {
+    width: 50%;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}
+
+.cookie-inner .popup-buttons button:last-of-type {
+  background-color: #926FB1;
+}
+
+.cookie-inner .popup-buttons button:last-of-type:hover {
+  background-color: #7e57a0;
+}
+
+@media screen and (min-width: 992px) {
+  .cookie-inner .popup-buttons button:last-of-type {
+    width: 50%;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cookie-inner .popup-buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
