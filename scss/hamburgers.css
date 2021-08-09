@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 15px 15px;
+  padding: 5px 15px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -26,23 +26,25 @@
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #000; }
+    background-color: #fff; }
 
 .hamburger-box {
-  width: 40px;
-  height: 24px;
+  width: 33px;
+  height: 22px;
+  top: -3px;
+  
   display: inline-block;
   position: relative; }
 
 .hamburger-inner {
   display: block;
-  top: 50%;
-  margin-top: -2px; }
+  top: 70%;
+  margin-top: -1.5px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: #000;
-    border-radius: 4px;
+    width: 33px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 0px;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
@@ -51,9 +53,9 @@
     content: "";
     display: block; }
   .hamburger-inner::before {
-    top: -10px; }
+    top: -8px; }
   .hamburger-inner::after {
-    bottom: -10px; }
+    bottom: -8px; }
 
 /*
    * 3DX

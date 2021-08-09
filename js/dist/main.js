@@ -1,17 +1,21 @@
 "use strict";
 
-var stickyMenu = document.getElementById('sticky-burger-menu');
-var stickyLines = document.getElementById('sticky-burger-anim'); // Sticky header
+var Menu = document.getElementById('burger-menu');
+var Lines = document.getElementById('burger-anim');
+var stickyMenu = document.getElementById('burger-menu2');
+var stickyLines = document.getElementById('burger-anim2'); // Sticky header
 
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
-  if (prevScrollpos > currentScrollPos) {
-    $("#sticky").slideDown(150);
+  if (prevScrollpos > currentScrollPos && prevScrollpos >= 208) {
+    $("#top-header").removeClass("main-header");
+    $("#top-header").addClass("sticky");
   } else {
-    $("#sticky").slideUp(150);
+    $("#top-header").removeClass("sticky");
+    $("#top-header").addClass("main-header");
   }
 
   prevScrollpos = currentScrollPos;
@@ -69,10 +73,28 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 } // Burger animation with sidebar soon
 
 
-stickyMenu.addEventListener('click', function (e) {
-  if (!stickyLines.classList.contains('is-active')) {
-    stickyLines.classList.add('is-active');
+var Menu = document.getElementById('burger-menu');
+var Lines = document.getElementById('burger-anim');
+var stickyMenu = document.getElementById('burger-menu2');
+var stickyLines = document.getElementById('burger-anim2');
+Menu.addEventListener('click', function (e) {
+  if (!Lines.classList.contains('is-active')) {
+    Lines.classList.add('is-active');
+    console.log(e);
   } else {
-    stickyLines.classList.remove('is-active');
+    Lines.classList.remove('is-active');
+    console.log(e);
   }
 });
+
+function stickyburger() {
+  stickyMenu.addEventListener("click", function (e) {
+    if (!stickyLines.classList.contains('is-active')) {
+      stickyLines.classList.add('is-active');
+      console.log(e);
+    } else {
+      stickyLines.classList.remove('is-active');
+      console.log(e);
+    }
+  });
+}
