@@ -2,32 +2,29 @@ header{
     background-color: #fff;
 }
 
+
 .main-header{
-    display: block;
-}
-
-
-
- .sticky{
     position: fixed;
-    top: 0;
+    top:-208px;
     left: 0;
-    right:0;
+    right: 0;
     z-index: 11;
-    transition: all 1s;
+}
+
+
+
+ #sticky{
+    position: fixed;
+    top: -208px;
+    width: 100%;
+    z-index: 11;
     box-shadow: 0 5px 35px rgba(0,0,0,.1);
-    animation: smoothScroll 1s forwards;
+    transition: top .25s ease-in-out;
+   
 }
 
 
-@keyframes smoothScroll {
-	0% {
-		transform: translateY(-208px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
-}
+
     
 
 

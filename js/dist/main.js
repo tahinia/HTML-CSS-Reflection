@@ -1,9 +1,35 @@
 "use strict";
 
-var Menu = document.getElementById('burger-menu');
-var Lines = document.getElementById('burger-anim');
-var stickyMenu = document.getElementById('burger-menu2');
-var stickyLines = document.getElementById('burger-anim2'); // Sticky header
+var Menu = document.querySelector('.menu');
+var Lines = document.querySelector('.hamburger');
+var stickyMenu = document.querySelector('#burger-menu2');
+var stickyLines = document.querySelector('#burger-anim2');
+var mainBody = document.getElementById('main-body');
+var sidebarOverlay = document.getElementById('overlay');
+var sidebarOverlay2 = document.getElementById('overlay2');
+var sidebar = document.getElementById('sidebar'); // Sticky header
+// var header = $('#top-header'),
+// headerHeight = header.height(),
+// offset = 0,
+// lastPos = 0;
+// $(document).on('scroll', function(e) {
+//   var newPos = $(document).scrollTop(),
+//       pos = newPos-lastPos;
+//   if (offset+pos>headerHeight) { 
+//       offset = headerHeight;
+//   } else if (newPos < 0){ // webkit inertia scroll fix
+//       offset = 0;
+//   } else {
+//       offset = offset+pos;
+//   };
+//   if (offset < 0) {
+//       offset = 0;
+//   } else {
+//       offset = offset;
+//   };
+//   header.css('top', (-offset)+'px');
+//   lastPos = newPos;
+//   });
 
 var prevScrollpos = window.pageYOffset;
 
@@ -11,11 +37,13 @@ window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
   if (prevScrollpos > currentScrollPos && prevScrollpos >= 208) {
-    $("#top-header").removeClass("main-header");
-    $("#top-header").addClass("sticky");
+    $("#sticky").css({
+      top: '0px'
+    });
   } else {
-    $("#top-header").removeClass("sticky");
-    $("#top-header").addClass("main-header");
+    $("#sticky").css({
+      top: '-208px'
+    });
   }
 
   prevScrollpos = currentScrollPos;
@@ -73,28 +101,129 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 } // Burger animation with sidebar soon
 
 
-var Menu = document.getElementById('burger-menu');
-var Lines = document.getElementById('burger-anim');
-var stickyMenu = document.getElementById('burger-menu2');
-var stickyLines = document.getElementById('burger-anim2');
 Menu.addEventListener('click', function (e) {
   if (!Lines.classList.contains('is-active')) {
     Lines.classList.add('is-active');
-    console.log(e);
+    stickyLines.classList.add('is-active');
+    mainBody.classList.add('sidebar-shown');
+    setTimeout(function () {
+      mainBody.classList.add('slide-in');
+    }, 5);
+    sidebarOverlay.classList.add('shown');
+    setTimeout(function () {
+      sidebarOverlay.classList.add('slide-in');
+    }, 1);
+    sidebarOverlay2.classList.add('shown');
+    setTimeout(function () {
+      sidebarOverlay2.classList.add('slide-in');
+    }, 1);
+    sidebar.classList.add('shown');
+    setTimeout(function () {
+      sidebar.classList.add('slide-in');
+    }, 1);
   } else {
     Lines.classList.remove('is-active');
-    console.log(e);
+    stickyLines.classList.remove('is-active');
+    mainBody.classList.remove('sidebar-shown');
+    setTimeout(function () {
+      mainBody.classList.remove('slide-in');
+    }, 300);
+    sidebarOverlay.classList.remove('shown');
+    setTimeout(function () {
+      sidebarOverlay.classList.remove('slide-in');
+    }, 300);
+    sidebarOverlay2.classList.remove('shown');
+    setTimeout(function () {
+      sidebarOverlay2.classList.remove('slide-in');
+    }, 300);
+    sidebar.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebar.classList.remove('shown');
+    }, 300);
   }
 });
-
-function stickyburger() {
-  stickyMenu.addEventListener("click", function (e) {
-    if (!stickyLines.classList.contains('is-active')) {
-      stickyLines.classList.add('is-active');
-      console.log(e);
-    } else {
-      stickyLines.classList.remove('is-active');
-      console.log(e);
-    }
-  });
-}
+stickyMenu.addEventListener('click', function (e) {
+  if (!stickyLines.classList.contains('is-active')) {
+    stickyLines.classList.add('is-active');
+    Lines.classList.add('is-active');
+    mainBody.classList.add('sidebar-shown');
+    setTimeout(function () {
+      mainBody.classList.add('slide-in');
+    }, 5);
+    sidebarOverlay.classList.add('shown');
+    setTimeout(function () {
+      sidebarOverlay.classList.add('slide-in');
+    }, 1);
+    sidebarOverlay2.classList.add('shown');
+    setTimeout(function () {
+      sidebarOverlay2.classList.add('slide-in');
+    }, 1);
+    sidebar.classList.add('shown');
+    setTimeout(function () {
+      sidebar.classList.add('slide-in');
+    }, 1);
+  } else {
+    stickyLines.classList.remove('is-active');
+    Lines.classList.remove('is-active');
+    mainBody.classList.remove('sidebar-shown');
+    setTimeout(function () {
+      mainBody.classList.remove('slide-in');
+    }, 300);
+    sidebarOverlay.classList.remove('shown');
+    setTimeout(function () {
+      sidebarOverlay.classList.remove('slide-in');
+    }, 300);
+    sidebarOverlay2.classList.remove('shown');
+    setTimeout(function () {
+      sidebarOverlay2.classList.remove('slide-in');
+    }, 300);
+    sidebar.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebar.classList.remove('shown');
+    }, 300);
+  }
+});
+sidebarOverlay.addEventListener('click', function (e) {
+  if (Lines.classList.contains('is-active')) {
+    Lines.classList.remove('is-active');
+    stickyLines.classList.remove('is-active');
+    mainBody.classList.remove('slide-in');
+    setTimeout(function () {
+      mainBody.classList.remove('sidebar-shown');
+    }, 300);
+    sidebarOverlay.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebarOverlay.classList.remove('shown');
+    }, 300);
+    sidebarOverlay2.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebarOverlay2.classList.remove('shown');
+    }, 300);
+    sidebar.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebar.classList.remove('shown');
+    }, 300);
+  }
+});
+sidebarOverlay2.addEventListener('click', function (e) {
+  if (stickyLines.classList.contains('is-active')) {
+    Lines.classList.remove('is-active');
+    stickyLines.classList.remove('is-active');
+    mainBody.classList.remove('slide-in');
+    setTimeout(function () {
+      mainBody.classList.remove('sidebar-shown');
+    }, 300);
+    sidebarOverlay.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebarOverlay.classList.remove('shown');
+    }, 300);
+    sidebarOverlay2.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebarOverlay2.classList.remove('shown');
+    }, 300);
+    sidebar.classList.remove('slide-in');
+    setTimeout(function () {
+      sidebar.classList.remove('shown');
+    }, 300);
+  }
+});
