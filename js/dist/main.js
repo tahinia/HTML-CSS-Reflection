@@ -31,18 +31,18 @@ var sidebar = document.getElementById('sidebar'); // Sticky header
 //   lastPos = newPos;
 //   });
 
-var prevScrollpos = window.pageYOffset;
+var prevScrollpos = 0;
 
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+mainBody.onscroll = function () {
+  var currentScrollPos = $(this).scrollTop();
 
-  if (prevScrollpos > currentScrollPos && prevScrollpos >= 208) {
+  if (currentScrollPos > prevScrollpos && currentScrollPos >= 208) {
     $("#sticky").css({
-      top: '0px'
+      top: '-208px'
     });
   } else {
     $("#sticky").css({
-      top: '-208px'
+      top: '0px'
     });
   }
 

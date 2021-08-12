@@ -39,15 +39,15 @@ var sidebar = document.getElementById('sidebar');
 //   });
 
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos && prevScrollpos >= 208 ) {
-    
-    $("#sticky").css({ top: '0px' });
-  } else {
+var prevScrollpos = 0;
+mainBody.onscroll = function() {
+  var currentScrollPos = $(this).scrollTop();
+  if (currentScrollPos> prevScrollpos && currentScrollPos >= 208 ) {
     
     $("#sticky").css({ top: '-208px' });
+    
+  } else {
+    $("#sticky").css({ top: '0px' });
     
   }
   prevScrollpos = currentScrollPos;
