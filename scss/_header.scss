@@ -1,8 +1,38 @@
+header{
+    background-color: #fff;
+}
+
+
+.main-header{
+    position: fixed;
+    top:-208px;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+
+
+
+ #sticky{
+    position: fixed;
+    top: -208px;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    transition: top .25s ease-in-out;
+   
+}
+
+
+
+    
+
+
 #container-header{
     padding-left: 15px;
     padding-right: 15px;
     min-height: 110px;
-
+    
     input{
         @include mq('md'){
             display: none;
@@ -138,17 +168,18 @@
     color: #333645;
 }
 
+.menu {
+    margin-left: 20px;
+    height: 56px;
+}
+
 .burger-btn{
     background-color: #333645;
     color: #fff;
-    border-radius: 3px;
+    border-color: #333645;
     height: 56px;
-    min-width: 63px;
-    display: block;
-    padding:0;
-    cursor: pointer;
-    margin-left: 20px;
-    border-width: 0;
+    border-radius: 3px;
+   
 
     &:hover{
         background-color: #22242e;
@@ -198,7 +229,7 @@
     line-height: 1;
     margin: 5px 0 0 0;
     text-transform: uppercase;
-    top: 12px;
+    
     text-align: center;
 }
 

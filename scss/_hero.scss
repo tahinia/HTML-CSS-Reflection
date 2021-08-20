@@ -4,14 +4,123 @@
 .hero-box{
     position: relative;
     border-top: 1px solid rgba(51,54,69,.5);
-     
+        
 }
 
 .hero-main {
     background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-3wAI.jpg");
     background-size: cover;
     background-position:center;
-    height:calc(100vh - 153px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include mq('sm'){
+        height:calc(100vh - 110px);
+    }
+
+
+    @include mq('md'){
+        height:calc(100vh - 209px);
+    }
+
+    
+}
+.hero-main2 {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-57sJ.jpg");
+    background-size: cover;
+    background-position:center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include mq('sm'){
+        height:calc(100vh - 110px);
+    }
+
+
+    @include mq('md'){
+        height:calc(100vh - 209px);
+    }
+
+    
+}
+
+.hero-main3 {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-5yqm.jpg");
+    background-size: cover;
+    background-position:center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include mq('sm'){
+        height:calc(100vh - 110px);
+    }
+
+
+    @include mq('md'){
+        height:calc(100vh - 209px);
+    }
+
+    
+}
+
+.hero-main4 {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-sqvx.jpg");
+    background-size: cover;
+    background-position:center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include mq('sm'){
+        height:calc(100vh - 110px);
+    }
+
+
+    @include mq('md'){
+        height:calc(100vh - 209px);
+    }
+
+    
+}
+
+.hero-main5 {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-JQsO.jpg");
+    background-size: cover;
+    background-position:center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include mq('sm'){
+        height:calc(100vh - 110px);
+    }
+
+
+    @include mq('md'){
+        height:calc(100vh - 209px);
+    }
+
+    
+}
+
+.hero-main6 {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgba(0,0,0,.0)), url("../img/home-lQs1.jpg");
+    background-size: cover;
+    background-position:center;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +191,46 @@
     }
 }
 
+.btn-hero2 {
+    background-color: #4183d7;
+    &:hover{
+        background-color: #2a6ec6;
+        border-color: #2665b5;
+    }
+}
+
+.btn-hero3 {
+    background-color: #d64541;
+    &:hover{
+        background-color: #c42e2a;
+        border-color: #b32a27;
+    }
+}
+
+.btn-hero4 {
+    background-color: #67809f;
+    &:hover{
+        background-color: #566c88;
+        border-color: #4e627b;
+    }
+}
+
+.btn-hero5 {
+    background-color: #2ecc71;
+    &:hover{
+        background-color: #26ab5f;
+        border-color: #239a55;
+    }
+}
+
+.btn-hero6 {
+    background-color: #f62459;
+    &:hover{
+        background-color: #e80a42;
+        border-color: #d4093c;
+    }
+}
+
 .btn {
     color: #fff;
     border-radius: 3px;
@@ -94,6 +243,46 @@
     
 }
 
+// owl carousel styling
 
 
+.owl-carousel {
+    position: relative;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 44px;
+    margin-top: 10px;
+    left: 0;
+    right: 0;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    span {
+        background-color: hsla(0,0,100%,.5);
+        width: 11px;
+        height: 11px;
+        margin: 0 10px;
+        &:hover {
+            background: #869791;
+        }
+    }
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: #fff;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+    }
+}
 
