@@ -11,32 +11,7 @@ var sidebar = document.getElementById('sidebar');
 
 
 // Sticky header
-// var header = $('#top-header'),
-// headerHeight = header.height(),
-// offset = 0,
-// lastPos = 0;
 
-// $(document).on('scroll', function(e) {
-//   var newPos = $(document).scrollTop(),
-//       pos = newPos-lastPos;
-  
-//   if (offset+pos>headerHeight) { 
-//       offset = headerHeight;
-//   } else if (newPos < 0){ // webkit inertia scroll fix
-//       offset = 0;
-//   } else {
-//       offset = offset+pos;
-//   };
-//   if (offset < 0) {
-//       offset = 0;
-//   } else {
-//       offset = offset;
-//   };
-  
-//   header.css('top', (-offset)+'px');
-  
-//   lastPos = newPos;
-//   });
 
 
 var prevScrollpos = 0;
@@ -111,7 +86,7 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 
 }
 
-// Burger animation with sidebar soon
+// Burger animation with sidebar
 
 
 

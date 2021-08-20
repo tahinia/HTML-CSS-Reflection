@@ -8,28 +8,6 @@ var mainBody = document.getElementById('main-body');
 var sidebarOverlay = document.getElementById('overlay');
 var sidebarOverlay2 = document.getElementById('overlay2');
 var sidebar = document.getElementById('sidebar'); // Sticky header
-// var header = $('#top-header'),
-// headerHeight = header.height(),
-// offset = 0,
-// lastPos = 0;
-// $(document).on('scroll', function(e) {
-//   var newPos = $(document).scrollTop(),
-//       pos = newPos-lastPos;
-//   if (offset+pos>headerHeight) { 
-//       offset = headerHeight;
-//   } else if (newPos < 0){ // webkit inertia scroll fix
-//       offset = 0;
-//   } else {
-//       offset = offset+pos;
-//   };
-//   if (offset < 0) {
-//       offset = 0;
-//   } else {
-//       offset = offset;
-//   };
-//   header.css('top', (-offset)+'px');
-//   lastPos = newPos;
-//   });
 
 var prevScrollpos = 0;
 
@@ -98,7 +76,7 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
     popup.classList.remove('shown');
     console.log("worked");
   });
-} // Burger animation with sidebar soon
+} // Burger animation with sidebar
 
 
 Menu.addEventListener('click', function (e) {
