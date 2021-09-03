@@ -7,7 +7,17 @@ var stickyLines = document.querySelector('#burger-anim2');
 var mainBody = document.getElementById('main-body');
 var sidebarOverlay = document.getElementById('overlay');
 var sidebarOverlay2 = document.getElementById('overlay2');
-var sidebar = document.getElementById('sidebar'); // Sticky header
+var sidebar = document.getElementById('sidebar');
+
+if (Modernizr.hiddenscroll === true) {
+  $('#sticky').css("width", "100%");
+} else {
+  $('#sticky').css("width", mainBody.clientWidth);
+}
+
+$(window).resize(function () {
+  $('#sticky').css("width", mainBody.clientWidth);
+}); // Sticky header
 
 var prevScrollpos = 0;
 
