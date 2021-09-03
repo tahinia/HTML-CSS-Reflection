@@ -95,7 +95,6 @@ if (getCookie("accepted") === "" || getCookie("accepted") === null) {
 Menu.addEventListener('click', function(e) {
   if (!Lines.classList.contains('is-active')) {
     Lines.classList.add('is-active');
-    stickyLines.classList.add('is-active');
 
     mainBody.classList.add('sidebar-shown');
     setTimeout(function() {
@@ -106,11 +105,7 @@ Menu.addEventListener('click', function(e) {
     setTimeout(function() {
       sidebarOverlay.classList.add('slide-in');
     },1);
-    sidebarOverlay2.classList.add('shown');
-    setTimeout(function() {
-      sidebarOverlay2.classList.add('slide-in');
-    },1);
-
+    
     sidebar.classList.add('shown');
     setTimeout(function () {
       sidebar.classList.add('slide-in');
@@ -120,7 +115,6 @@ Menu.addEventListener('click', function(e) {
 
   } else {
     Lines.classList.remove('is-active');
-    stickyLines.classList.remove('is-active');
     
     mainBody.classList.remove('sidebar-shown');
     setTimeout(function() {
@@ -132,10 +126,7 @@ Menu.addEventListener('click', function(e) {
       sidebarOverlay.classList.remove('slide-in');
     },300);
 
-    sidebarOverlay2.classList.remove('shown');
-    setTimeout(function() {
-      sidebarOverlay2.classList.remove('slide-in');
-    },300);
+    
     sidebar.classList.remove('slide-in');
     setTimeout(function () {
       sidebar.classList.remove('shown');
@@ -148,17 +139,13 @@ Menu.addEventListener('click', function(e) {
 stickyMenu.addEventListener('click', function(e) {
   if (!stickyLines.classList.contains('is-active')) {
     stickyLines.classList.add('is-active');
-    Lines.classList.add('is-active');
 
     mainBody.classList.add('sidebar-shown');
     setTimeout(function() {
       mainBody.classList.add('slide-in');
     },5);
 
-    sidebarOverlay.classList.add('shown');
-    setTimeout(function() {
-      sidebarOverlay.classList.add('slide-in');
-    },1);
+   
 
     sidebarOverlay2.classList.add('shown');
     setTimeout(function() {
@@ -175,17 +162,14 @@ stickyMenu.addEventListener('click', function(e) {
 
   } else {
     stickyLines.classList.remove('is-active');
-    Lines.classList.remove('is-active');
+  
     
     mainBody.classList.remove('sidebar-shown');
     setTimeout(function() {
       mainBody.classList.remove('slide-in');
     },300);
 
-    sidebarOverlay.classList.remove('shown');
-    setTimeout(function() {
-      sidebarOverlay.classList.remove('slide-in');
-    },300);
+    
 
     sidebarOverlay2.classList.remove('shown');
     setTimeout(function() {

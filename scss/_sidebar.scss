@@ -2,7 +2,7 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    
+    width: 100%;
     height: 100vh;
     z-index: 1;
     background-color: #fff;
@@ -16,7 +16,7 @@
     &.slide-in{
         right: 275px;
         @include mq('lg') {
-            right: 350px;
+            right: 320px;
         }
     }
 }
