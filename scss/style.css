@@ -526,6 +526,7 @@ a {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-3wAI.jpg");
   background-size: cover;
   background-position: center;
+  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,6 +557,7 @@ a {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-57sJ.jpg");
   background-size: cover;
   background-position: center;
+  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,6 +588,7 @@ a {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-5yqm.jpg");
   background-size: cover;
   background-position: center;
+  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,6 +619,7 @@ a {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-sqvx.jpg");
   background-size: cover;
   background-position: center;
+  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,6 +650,7 @@ a {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-JQsO.jpg");
   background-size: cover;
   background-position: center;
+  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,6 +681,7 @@ a {
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("../img/home-lQs1.jpg");
   background-size: cover;
   background-position: center;
+  height: calc(100vh - 153px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
