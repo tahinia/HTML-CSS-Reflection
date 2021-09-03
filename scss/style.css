@@ -102,7 +102,7 @@ a {
           transform: translateY(0);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .cookie-inner {
     width: 600px;
     -webkit-transform: translateY(20%);
@@ -159,7 +159,7 @@ a {
   background-color: #84858f;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .cookie-inner .popup-buttons button:first-of-type {
     width: 50%;
     margin-right: 15px;
@@ -175,14 +175,14 @@ a {
   background-color: #7e57a0;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .cookie-inner .popup-buttons button:last-of-type {
     width: 50%;
     margin-left: 15px;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .cookie-inner .popup-buttons {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -864,7 +864,7 @@ a {
           box-sizing: border-box;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   #middle {
     padding: 50px 0;
   }
@@ -888,7 +888,7 @@ a {
   margin: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   .card-row {
     width: 100%;
   }
@@ -1094,7 +1094,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   .card {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -2028,6 +2028,25 @@ header {
   }
 }
 
+#container-header2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 110px;
+}
+
+@media screen and (min-width: 992px) {
+  #container-header2 input {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  #container-header2 input {
+    display: inline-block;
+    width: 240px;
+  }
+}
+
 .top-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2096,7 +2115,7 @@ header {
       flex-shrink: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   .searchbar {
     display: none;
   }
@@ -2158,6 +2177,44 @@ header {
 }
 
 #submit-search:hover {
+  background-color: #7e808a;
+}
+
+#submit-search2 {
+  margin: 0;
+  display: inline-block;
+  height: 56px;
+  background-color: #999aa2;
+  border-radius: 0 3px 3px 0;
+  border-color: #fff;
+  border: none;
+  width: 63px;
+  font-size: 23px;
+  vertical-align: bottom;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+#submit-search2 .fa-search {
+  position: absolute;
+  top: 17px;
+  left: 22px;
+}
+
+@media screen and (min-width: 992px) {
+  #submit-search2 {
+    border-radius: 3px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  #submit-search2 {
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+#submit-search2:hover {
   background-color: #7e808a;
 }
 

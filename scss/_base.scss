@@ -92,7 +92,7 @@ a{
     color: #666;
     margin: auto;
     transform: translateY(0);
-    @include mq('md') {
+    @include mq('sm') {
         width: 600px;
         transform: translateY(20%);
     }
@@ -130,7 +130,7 @@ a{
             &:hover {
                 background-color: #84858f;
             }
-            @include mq('md') {
+            @include mq('sm') {
                 width: 50%;
                 margin-right: 15px;
                 margin-bottom: 0;
@@ -141,12 +141,12 @@ a{
             &:hover {
                 background-color: $purple2;
             }
-            @include mq('md') {
+            @include mq('sm') {
                 width: 50%;
                 margin-left: 15px;
             }
         }
-        @include mq('md') {
+        @include mq('sm') {
             flex-direction: row;
         }
     }
