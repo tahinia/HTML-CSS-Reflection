@@ -45,46 +45,45 @@ $('.owl-carousel').owlCarousel({
   loop: true,
   autoplay: true,
   autoplayHoverPause: true
-}); //cookie popup 
+}); //Cookie popup 
 
 var popup = document.getElementById('cookie-container');
-var cookieSettings = document.getElementById('cookie-settings');
 var cookieAccept = document.getElementById('cookie-accept');
 
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+function createCookie(name, value, days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    var expires = "; expires=" + date.toGMTString();
+  } else var expires = "";
+
+  document.cookie = name + "=" + value + expires + "; path=/";
 }
 
-function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
 
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
 
     while (c.charAt(0) == ' ') {
-      c = c.substring(1);
+      c = c.substring(1, c.length);
     }
 
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
   }
 
-  return "";
+  return null;
 }
 
-if (getCookie("accepted") === "" || getCookie("accepted") === null) {
+if (readCookie("accepted") === "" || readCookie("accepted") === null) {
   popup.classList.add('shown');
   document.body.classList.add('fixed-position');
   cookieAccept.addEventListener('click', function (e) {
-    setCookie("accepted", "true", 30);
+    createCookie("accepted", "true", 30);
     popup.classList.remove('shown');
-    console.log("worked");
+    console.log("success");
   });
 } // Burger animation with sidebar
 

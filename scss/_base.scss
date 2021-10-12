@@ -6,6 +6,8 @@
 html, body{
     letter-spacing: .4px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: 0.3 ease all;
 }
 h1 {
     text-transform: uppercase;
