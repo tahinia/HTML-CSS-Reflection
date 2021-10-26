@@ -846,6 +846,10 @@ a {
   border-color: transparent;
 }
 
+.card-row .card:hover h2, .card-row .card:hover p {
+  color: white;
+}
+
 .card-row .card:hover .line {
   background-color: #fff;
 }
@@ -985,6 +989,7 @@ a {
   padding-bottom: 17px;
   margin: 0 0 11px;
   font-weight: 400;
+  color: #333645;
 }
 
 .card .line {
@@ -1000,6 +1005,7 @@ a {
   line-height: 1.375rem;
   margin-bottom: 13px;
   font-weight: 400;
+  color: #333645;
 }
 
 .card:hover {
