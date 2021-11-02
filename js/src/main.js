@@ -197,3 +197,17 @@ sidebarOverlay2.addEventListener('click', function(e) {
 
   } 
 });
+
+//Drop down contact
+
+let dropdown = document.querySelector('.dropdown-link')
+let hidden = document.querySelector('.hidden_text')
+
+
+
+dropdown.addEventListener('click', () => {
+    if (clicked) {
+        hidden.classList.toggle('show_hidden');
+    }
+    ;
+})

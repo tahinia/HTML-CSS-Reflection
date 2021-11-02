@@ -50,6 +50,10 @@ a{
     padding-bottom: 50px;
 }
 
+.bottom{
+    padding-top: 0px;
+}
+
 .margin-width{
     @include mq('sm'){
         width:750px;

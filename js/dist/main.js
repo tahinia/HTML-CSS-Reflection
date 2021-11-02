@@ -1,4 +1,4 @@
-"use strict";
+
 
 var Menu = document.querySelector('.menu');
 var Lines = document.querySelector('.hamburger');
@@ -8,7 +8,8 @@ var mainBody = document.getElementById('main-body');
 var sidebarOverlay = document.getElementById('overlay');
 var sidebarOverlay2 = document.getElementById('overlay2');
 var sidebar = document.getElementById('sidebar');
-
+var dropdown = document.querySelector('.dropdown-link');
+var hidden = document.querySelector('.hidden-text');
 if (Modernizr.hiddenscroll === true) {
   $('#sticky').css("width", "100%");
 } else {
@@ -129,4 +130,12 @@ sidebarOverlay2.addEventListener('click', function (e) {
     sidebar.classList.toggle('slide-in');
     sidebar.classList.toggle('shown');
   }
+}); //Drop down contact
+
+
+dropdown.addEventListener('click', function () {
+    hidden.classList.toggle('show_hidden');
+  
+
+  ;
 });

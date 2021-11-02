@@ -48,6 +48,10 @@ a {
   padding-bottom: 50px;
 }
 
+.bottom {
+  padding-top: 0px;
+}
+
 @media screen and (min-width: 768px) {
   .margin-width {
     width: 750px;
@@ -968,7 +972,7 @@ a {
   }
 }
 
-.card {
+.card-row .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -983,7 +987,7 @@ a {
   padding: 30px;
 }
 
-.card h2 {
+.card-row .card h2 {
   font-size: 1.125rem;
   position: relative;
   padding-bottom: 17px;
@@ -992,7 +996,7 @@ a {
   color: #333645;
 }
 
-.card .line {
+.card-row .card .line {
   width: 28px;
   height: 3px;
   display: block;
@@ -1000,7 +1004,7 @@ a {
   margin: 0 auto;
 }
 
-.card p {
+.card-row .card p {
   font-size: .8125rem;
   line-height: 1.375rem;
   margin-bottom: 13px;
@@ -1008,56 +1012,56 @@ a {
   color: #333645;
 }
 
-.card:hover {
+.card-row .card:hover {
   text-decoration: none;
 }
 
 @media screen and (max-width: 766px) {
-  .card {
+  .card-row .card {
     flex: 1 1 100%;
     max-width: 100%;
     margin-left: 15px;
     margin-right: 15px;
   }
-  .card:last-child {
+  .card-row .card:last-child {
     margin-bottom: 0px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .card {
+  .card-row .card {
     max-width: 720px;
     flex-basis: 720px;
     padding: 30px;
     margin-left: 15px;
     margin-right: 15px;
   }
-  .card:nth-child(n+4) {
+  .card-row .card:nth-child(n+4) {
     flex-basis: 345px;
     max-width: 345px;
   }
-  .card:nth-child(n+6) {
+  .card-row .card:nth-child(n+6) {
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .card {
+  .card-row .card {
     max-width: 293.33px;
     flex-basis: 293.33px;
   }
-  .card:nth-child(n+4) {
+  .card-row .card:nth-child(n+4) {
     flex-basis: 455px;
     max-width: 455px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .card {
+  .card-row .card {
     max-width: 370px;
     flex-basis: 370px;
   }
-  .card:nth-child(n+4) {
+  .card-row .card:nth-child(n+4) {
     max-width: 270px;
     flex-basis: 270px;
     margin-bottom: 0;
@@ -2434,5 +2438,465 @@ header {
 
 .sec-sidebar-nav > ul > li:hover > a {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.map {
+  height: 300px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 0;
+}
+
+.breadcrumb-section {
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  padding: 14px 0 13px;
+  z-index: 10;
+  display: block;
+  border-top: 1px solid #333645;
+}
+
+@media screen and (max-width: 766px) {
+  .breadcrumb-section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .breadcrumb-section {
+    border-top: 0;
+  }
+}
+
+/* Style the list */
+ul.breadcrumb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 0.8125rem;
+  color: #333645;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 0 5px;
+  color: #333645;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #333645;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-title-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #333645;
+  margin-bottom: 50px;
+}
+
+.contact-title-section h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 0;
+  color: #fff;
+  text-transform: none;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-title-section {
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+  .contact-title-section h1 {
+    color: #333645;
+    margin: 0 0 28px;
+  }
+}
+
+.office_container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.office_container .card {
+  height: 100%;
+  margin-bottom: 50px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 992px) {
+  .office_container .card {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.office_container .card .contact-image img {
+  width: 100%;
+  height: auto;
+}
+
+.office_container .card .card_top {
+  border-radius: 3px 3px 0 0;
+  height: 100%;
+  padding: 30px;
+  text-align: left;
+}
+
+.office_container .card .card_top h2 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.office_container .card .card_top h2 a {
+  color: #333645;
+  text-transform: none;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.office_container .card .card_top h2 a:hover {
+  text-decoration: underline;
+}
+
+.office_container .card .card_top p {
+  margin: 0 0 10px;
+  margin-bottom: 15px;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.office_container .card .card_top .contact-tel a {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #926fb1;
+}
+
+.office_container .card .card_top .contact-tel a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+  .office_container {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.form_submission {
+  text-align: left;
+}
+
+.form_submission form {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #e6e7e9;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.form_submission form input {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+  border-radius: 3px;
+  box-shadow: none;
+  border: solid 1px #ccc;
+}
+
+.form_submission form input:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.form_submission form label {
+  display: inline-block;
+  padding: 0 0 10px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.form_submission form p {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  color: #d24d57;
+}
+
+.form_submission form .span-input {
+  width: 100%;
+}
+
+@media screen and (min-width: 1260px) {
+  .form_submission form .span-input {
+    width: 50%;
+  }
+}
+
+.form_submission form input,
+.form_submission form label {
+  color: #333645;
+  font-size: 16px;
+}
+
+.form_submission form #message_input {
+  resize: vertical;
+  width: 100%;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  padding: 5px;
+  height: 100%;
+  min-height: 100%;
+}
+
+.form_submission form #message_input:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.form_submission form #updates {
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0;
+}
+
+.form_submission form #updates .checkmark {
+  margin-right: 20px;
+}
+
+.form_submission form #updates .privacy_text {
+  padding-left: 40px;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.form_submission form #updates label a {
+  display: inline-block;
+  font-size: 16px;
+  color: #333645;
+  text-decoration: underline;
+}
+
+.form_submission form .invalid {
+  border: solid 1px red;
+  outline-color: red;
+}
+
+.form_submission form .invalid-textarea {
+  outline-color: red;
+  border: solid 1px red !important;
+}
+
+.form_submission form .success {
+  color: white;
+  border-radius: 10px;
+  background-color: #3bb143;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.form_submission form .success .success_message {
+  color: white;
+  line-height: 60px;
+}
+
+.form_submission form .success i {
+  color: grey;
+  line-height: 60px;
+}
+
+.form_submission form .success i:hover {
+  color: darkslategrey;
+}
+
+.form_submission form .error {
+  color: white;
+  border-radius: 10px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.form_submission form .error .error_message {
+  color: #a94442;
+  line-height: 60px;
+}
+
+.form_submission form .error i {
+  color: #000;
+  line-height: 60px;
+  opacity: 0.2;
+}
+
+.form_submission form .error i:hover {
+  opacity: 0.5;
+}
+
+.form_submission form .show_pop_up {
+  display: flex;
+}
+
+.form_submission form .show_pop_up_error {
+  display: flex;
+}
+
+.form_submission form .send_button {
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #926fb1;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.form_submission form .send_button:hover {
+  background-color: #7e57a0;
+  border-color: #735093;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1260px) {
+  .form_submission {
+    width: 63%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .name_container,
+  .telephone_container {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .email_container,
+  .subject_container {
+    padding-left: 15px;
+  }
+}
+
+.message_container {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1260px) {
+  .message_container {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.out-of-hours-message {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.out-of-hours-message p {
+  color: #666;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.out-of-hours-message strong {
+  font-weight: 600;
+  color: #333645;
+}
+
+@media screen and (min-width: 1260px) {
+  .out-of-hours-message {
+    width: 33.3%;
+  }
+}
+
+.contact-email-text {
+  color: #926fb1 !important;
+  font-weight: 600;
+  font-size: 1.625rem;
+}
+
+.contact-email-text:hover {
+  text-decoration: underline;
+}
+
+.dropdown-link {
+  color: #333645;
+  display: inline-block;
+}
+
+.dropdown-link p {
+  display: block;
+}
+
+.dropdown-link i {
+  margin-left: .5rem;
+}
+
+.dropdown-link:hover {
+  text-decoration: underline;
+}
+
+.hidden-text {
+  display: none;
+  transition: all .25s ease;
+}
+
+.hidden-text p {
+  font-weight: 400;
+  transition: all .25s ease;
+}
+
+.show_hidden {
+  display: block;
+}
+
+.shell-flex {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 1260px) {
+  .shell-flex {
+    flex-direction: row;
+  }
 }
 /*# sourceMappingURL=style.css.map */
