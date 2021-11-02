@@ -91,6 +91,7 @@ if (readCookie("accepted") === "" || readCookie("accepted") === null) {
 
 Menu.addEventListener('click', function (e) {
   Lines.classList.toggle('is-active');
+  stickyLines.classList.toggle('is-active')
   mainBody.classList.toggle('sidebar-shown');
   mainBody.classList.toggle('slide-in');
   sidebarOverlay.classList.toggle('shown');
@@ -99,6 +100,7 @@ Menu.addEventListener('click', function (e) {
   sidebar.classList.toggle('slide-in');
 });
 stickyMenu.addEventListener('click', function (e) {
+  Lines.classList.toggle('is-active');
   stickyLines.classList.toggle('is-active');
   mainBody.classList.toggle('sidebar-shown');
   mainBody.classList.toggle('slide-in');
@@ -108,7 +110,7 @@ stickyMenu.addEventListener('click', function (e) {
   sidebar.classList.toggle('slide-in');
 });
 sidebarOverlay.addEventListener('click', function (e) {
-  if (Lines.classList.contains('is-active')) {
+ 
     Lines.classList.toggle('is-active');
     stickyLines.classList.toggle('is-active');
     mainBody.classList.toggle('slide-in');
@@ -117,10 +119,10 @@ sidebarOverlay.addEventListener('click', function (e) {
     sidebarOverlay.classList.toggle('shown');
     sidebar.classList.toggle('slide-in');
     sidebar.classList.toggle('shown');
-  }
+  
 });
 sidebarOverlay2.addEventListener('click', function (e) {
-  if (stickyLines.classList.contains('is-active')) {
+ 
     Lines.classList.toggle('is-active');
     stickyLines.classList.toggle('is-active');
     mainBody.classList.toggle('slide-in');
@@ -129,7 +131,7 @@ sidebarOverlay2.addEventListener('click', function (e) {
     sidebarOverlay2.classList.toggle('shown');
     sidebar.classList.toggle('slide-in');
     sidebar.classList.toggle('shown');
-  }
+  
 }); //Drop down contact
 
 

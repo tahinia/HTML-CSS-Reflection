@@ -101,7 +101,8 @@ if (readCookie("accepted") === "" || readCookie("accepted") === null) {
 
 
 Menu.addEventListener('click', function(e) {
-  
+    
+    stickyLines.classList.toggle('is-active');
     Lines.classList.toggle('is-active');
 
     mainBody.classList.toggle('sidebar-shown');
@@ -124,7 +125,7 @@ Menu.addEventListener('click', function(e) {
     
 
 stickyMenu.addEventListener('click', function(e) {
- 
+    Lines.classList.toggle('is-active');
     stickyLines.classList.toggle('is-active');
 
     mainBody.classList.toggle('sidebar-shown');
@@ -150,7 +151,7 @@ stickyMenu.addEventListener('click', function(e) {
   } );
 
 sidebarOverlay.addEventListener('click', function(e) {
-  if (Lines.classList.contains('is-active')) {
+  
     Lines.classList.toggle('is-active');
     
     stickyLines.classList.toggle('is-active');
@@ -172,11 +173,11 @@ sidebarOverlay.addEventListener('click', function(e) {
       sidebar.classList.toggle('shown');
 
 
-  } 
+  
 });
 
 sidebarOverlay2.addEventListener('click', function(e) {
-  if (stickyLines.classList.contains('is-active')) {
+  
     Lines.classList.toggle('is-active');
     stickyLines.classList.toggle('is-active');
     mainBody.classList.toggle('slide-in');
@@ -195,7 +196,7 @@ sidebarOverlay2.addEventListener('click', function(e) {
       sidebar.classList.toggle('shown');
    
 
-  } 
+  
 });
 
 //Drop down contact
