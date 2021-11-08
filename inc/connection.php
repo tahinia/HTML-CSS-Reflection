@@ -9,5 +9,13 @@ $dbPassword = $_ENV['DB_PW'];
 $dbName = $_ENV['DB_NAME'];
 
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName)
-    or die("Connect failed: %s/n" . $conn->error);
+try {
+    $dsn = "mysql:host=" . $dbServername . ";dbname=" . $dbName;
+    $db = new PDO($dsn, $dbUsername, $dbPassword);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $db;
+} catch (Exception $e) {
+    echo "Unable to connect - ";
+    echo $e->getMessage();
+    exit;
+}

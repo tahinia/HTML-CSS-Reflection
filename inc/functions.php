@@ -4,9 +4,6 @@ ini_set('display_errors', 1);
 
 require_once 'connection.php';
 
-if (!$conn) {
-    die("Error: Can not connect. " . mysqli_connect_error());
-}
 
 $namevalid = false;
 $emailvalid = false;

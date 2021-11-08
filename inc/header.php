@@ -11,7 +11,6 @@
         <div class="header-buttons">
           <div class="support">
             <div class="btn support-btn">
-              <i class="fas fa-mouse" aria-hidden="true"></i>
               <a href="contact.php"><i class="fas fa-mouse" aria-hidden="true"></i>
                 <span>Support</span>
               </a>
