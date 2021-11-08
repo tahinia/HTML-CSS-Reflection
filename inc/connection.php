@@ -1,9 +1,9 @@
 <?php
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "netmatters_reflection";
+$dbServername = $_ENV['DB_HOST'];
+$dbUsername = $_ENV['DB_USER'];
+$dbPassword = $_ENV['DB_PW'];
+$dbName = $_ENV['DB_NAME'];
 
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName)
