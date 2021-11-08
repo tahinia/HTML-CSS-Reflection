@@ -4,7 +4,7 @@
     <div id="container-header" class="margin-width">
       <div class="top-header">
         <div class="logo-container">
-          <a href="../index.php">
+          <a href="index.php#top">
             <img src="img/f-logo.png" alt="Netmatters logo">
           </a>
         </div>
@@ -12,12 +12,14 @@
           <div class="support">
             <div class="btn support-btn">
               <i class="fas fa-mouse" aria-hidden="true"></i>
-              <span>Support</span>
+              <a href="contact.php"><i class="fas fa-mouse" aria-hidden="true"></i>
+                <span>Support</span>
+              </a>
             </div>
           </div>
           <div class="contact">
             <div class="btn contact-btn">
-              <a href="../contact.php"><i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <a href="contact.php"><i class="fas fa-paper-plane" aria-hidden="true"></i>
                 <span>Contact</span>
               </a>
             </div>
