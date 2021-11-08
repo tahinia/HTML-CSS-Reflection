@@ -6,14 +6,14 @@
          <div id="container-header2" class="margin-width">
              <div class="top-header">
                  <div class="logo-container">
-                     <a href="index.php">
+                     <a href="../index.php">
                          <img src="img/f-logo.png" alt="Netmatters logo">
                      </a>
                  </div>
                  <div class="header-buttons">
                      <div class="support">
                          <div class="btn support-btn">
-                             <a href="contact.php"><i class="fas fa-mouse" aria-hidden="true"></i>
+                             <a href="../contact.php"><i class="fas fa-mouse" aria-hidden="true"></i>
                                  <span>Support</span>
                              </a>
                          </div>

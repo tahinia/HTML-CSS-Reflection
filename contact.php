@@ -193,7 +193,7 @@ require_once 'inc/functions.php'
                                                                                                                                 echo $phone;
                                                                                                                             } ?>"><br>
                     </span>
-                    <span class="subject_container span-input">
+                    <span class="subject_container span-input <?php echo $subjecttextError ?>">
                         <label for="subject_input">Subject</label>
                         <p>*</p><br>
                         <input class="<?php echo $subjectError ?>" type="text" name="subject" id="subject_input" value="<?php if (empty($subject)) {
@@ -202,7 +202,7 @@ require_once 'inc/functions.php'
                                                                                                                             echo $subject;
                                                                                                                         } ?>"><br>
                     </span>
-                    <span class="message_container span-input">
+                    <span class="message_container span-input<?php echo $messagetextError ?>">
                         <label for="message_input">Message</label>
                         <p>*</p><br>
                         <textarea class="<?php echo $messageError ?>" type="text" name="message" id="message_input"><?php if (empty($message)) {
@@ -255,7 +255,7 @@ require_once 'inc/functions.php'
             </div>
         </div>
 
-        <?php require 'inc//newsletter.php'; ?>
+        <?php require 'inc/newsletter.php'; ?>
         <?php require 'inc/footer.php'; ?>
         <?php require 'inc/sticky.php'; ?>
 

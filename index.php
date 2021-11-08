@@ -54,7 +54,7 @@
   <div id="main-body">
 
 
-    <?php require 'inc/header.php'; ?>
+    <?php require './inc/header.php'; ?>
 
 
     <!-- hero banner with button -->
@@ -310,7 +310,7 @@
       </div>
       <div class="section margin-width">
         <div class="cards-news">
-          <?php require 'inc/newsCards.php'; ?>
+          <?php require './inc/newsCards.php'; ?>
         </div>
       </div>
     </div>
@@ -370,19 +370,19 @@
         </div>
       </div>
     </section>
-    <?php require 'inc//newsletter.php'; ?>
+    <?php require './inc/newsletter.php'; ?>
 
     <!-- Footer -->
-    <?php require 'inc/footer.php'; ?>
+    <?php require './inc/footer.php'; ?>
 
-    <?php require 'inc/sticky.php'; ?>
+    <?php require './inc/sticky.php'; ?>
 
 
 
   </div>
 
 
-  <?php require 'inc/sidebar.php'; ?>
+  <?php require './inc/sidebar.php'; ?>
 
 
 
