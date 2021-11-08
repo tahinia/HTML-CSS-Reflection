@@ -77,12 +77,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $messagevalue = htmlspecialchars($message);
             $news_update_value = $news_update;
 
-            $sql = "INSERT into contact_posts (name, email, phone, subject, message, newsletter) VALUES ('$namevalue', '$emailvalue', '$phonevalue', '$subjectvalue', '$messagevalue', '$news_update_value');";
+            try {
+                $sql = "INSERT into contact_posts (name, email, phone, subject, message, newsletter) VALUES (:name, :email, :phone, :subject, :message, :newsupdate);";
+                $stmt = $db->prepare($sql);
+                $stmt->bindParam(":name", $namevalue);
+                $stmt->bindParam(":email", $emailvalue);
+                $stmt->bindParam(":phone", $phonevalue);
+                $stmt->bindParam(":subject", $subjectvalue);
+                $stmt->bindParam(":message", $messagevalue);
+                $stmt->bindParam(":newsupdate", $news_update_value);
+                $stmt->execute();
+            } catch (Exception $e) {
+                echo "Unable to connect to DB- ";
+                echo $e->getMessage();
+                return false;
+            }
 
             $pop_up = 'show_pop_up';
             $_SESSION['contact_session'] = $pop_up;
 
-            mysqli_query($conn, $sql);
+
 
             $name = '';
             $email = '';
